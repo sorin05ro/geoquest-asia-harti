@@ -1,0 +1,6661 @@
+{
+ "versiune": 1,
+ "harti": {
+  "hidrografie": {
+   "nume": "Apele Asiei",
+   "imagine": "assets/atlas/asia_hidrografie.webp",
+   "imagine_jpg": "assets/atlas/asia_hidrografie.jpg",
+   "latime": 1200,
+   "inaltime": 864,
+   "titlu": "hidrografică a Asiei",
+   "sursa": "Harta hidrografică a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "masti_fixe": [
+    {
+     "x": 0.925,
+     "y": 0.01389,
+     "w": 0.06,
+     "h": 0.08102,
+     "culoare": "#cfebf9"
+    }
+   ],
+   "legenda": {
+    "x": 0.66333,
+    "y": 0.69444,
+    "w": 0.3,
+    "h": 0.21759,
+    "culoare": "#d1e9f8"
+   },
+   "scara": {
+    "x0": 294,
+    "x1": 420,
+    "km": 2000
+   }
+  },
+  "pozitie": {
+   "nume": "Granițele Asiei",
+   "imagine": "assets/atlas/asia_pozitie.webp",
+   "imagine_jpg": "assets/atlas/asia_pozitie.jpg",
+   "latime": 1000,
+   "inaltime": 769,
+   "titlu": "poziției geografice și a țărmurilor Asiei",
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "masti_fixe": [],
+   "legenda": null,
+   "scara": {
+    "x0": 771,
+    "x1": 914,
+    "km": 2800
+   }
+  },
+  "relief": {
+   "nume": "Relieful Asiei",
+   "imagine": "assets/atlas/asia_relief.webp",
+   "imagine_jpg": "assets/atlas/asia_relief.jpg",
+   "latime": 2286,
+   "inaltime": 1667,
+   "titlu": "fizică (relieful) a Asiei",
+   "sursa": "Harta fizică (relieful) a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "masti_fixe": [],
+   "legenda": {
+    "x": 0.75678,
+    "y": 0.74145,
+    "w": 0.24322,
+    "h": 0.22196,
+    "culoare": "#d3eefa"
+   },
+   "scara": null
+  }
+ },
+ "regiuni": [
+  {
+   "id": "ape",
+   "harta": "hidrografie",
+   "nume": "Apele Asiei",
+   "icon": "🌊",
+   "culoare": "#1e6fa8",
+   "niveluri": [
+    {
+     "id": "a1",
+     "titlu": "Râurile Siberiei",
+     "categorii": [
+      "rau"
+     ],
+     "filtru": {
+      "bazin": [
+       "arctic"
+      ]
+     },
+     "tipuri": [
+      "gaseste",
+      "ce_e_aici",
+      "eticheta"
+     ]
+    },
+    {
+     "id": "a2",
+     "titlu": "Râuri spre Pacific și Oceanul Indian",
+     "categorii": [
+      "rau"
+     ],
+     "filtru": {
+      "bazin": [
+       "pacific",
+       "indian"
+      ]
+     },
+     "tipuri": [
+      "gaseste",
+      "ce_e_aici",
+      "eticheta"
+     ]
+    },
+    {
+     "id": "a3",
+     "titlu": "Lacuri și regiuni fără scurgere",
+     "categorii": [
+      "lac",
+      "regiune_endoreica"
+     ],
+     "extra_ids": [
+      "sir-daria",
+      "amu-daria",
+      "ural-rau"
+     ],
+     "tipuri": [
+      "gaseste",
+      "ce_e_aici"
+     ]
+    },
+    {
+     "id": "a4",
+     "titlu": "Mări, golfuri și oceane",
+     "categorii": [
+      "mare",
+      "golf",
+      "ocean"
+     ],
+     "tipuri": [
+      "gaseste",
+      "ce_e_aici",
+      "eticheta"
+     ]
+    },
+    {
+     "id": "a5",
+     "titlu": "Spre ce ocean curge?",
+     "categorii": [
+      "rau"
+     ],
+     "tipuri": [
+      "ocean"
+     ]
+    },
+    {
+     "id": "a6",
+     "titlu": "Amestec: apele Asiei",
+     "categorii": null,
+     "tipuri": [
+      "gaseste",
+      "ce_e_aici",
+      "eticheta",
+      "ocean"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "granite",
+   "harta": "pozitie",
+   "nume": "Granițele Asiei",
+   "icon": "🧭",
+   "culoare": "#c0392b",
+   "niveluri": [
+    {
+     "id": "g1",
+     "titlu": "Puncte extreme și vecini",
+     "categorii": [
+      "punct_extrem",
+      "vecin"
+     ],
+     "tipuri": [
+      "gaseste",
+      "ce_e_aici"
+     ]
+    },
+    {
+     "id": "g2",
+     "titlu": "Peninsule",
+     "categorii": [
+      "peninsula"
+     ],
+     "tipuri": [
+      "gaseste",
+      "ce_e_aici",
+      "eticheta"
+     ]
+    },
+    {
+     "id": "g3",
+     "titlu": "Insule și arhipelaguri",
+     "categorii": [
+      "insula"
+     ],
+     "tipuri": [
+      "gaseste",
+      "ce_e_aici",
+      "eticheta"
+     ]
+    },
+    {
+     "id": "g4",
+     "titlu": "Mări și oceane",
+     "categorii": [
+      "mare",
+      "ocean"
+     ],
+     "tipuri": [
+      "gaseste",
+      "ce_e_aici",
+      "eticheta"
+     ]
+    },
+    {
+     "id": "g5",
+     "titlu": "Golfuri și strâmtori",
+     "categorii": [
+      "golf",
+      "stramtoare"
+     ],
+     "tipuri": [
+      "gaseste",
+      "ce_e_aici"
+     ]
+    },
+    {
+     "id": "g6",
+     "titlu": "Liniile rețelei geografice",
+     "categorii": [
+      "linie"
+     ],
+     "tipuri": [
+      "gaseste",
+      "ce_e_aici"
+     ]
+    },
+    {
+     "id": "g7",
+     "titlu": "Amestec: țărmurile Asiei",
+     "categorii": null,
+     "tipuri": [
+      "gaseste",
+      "ce_e_aici",
+      "eticheta"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "relief",
+   "harta": "relief",
+   "nume": "Relieful Asiei",
+   "icon": "🏔️",
+   "culoare": "#94532a",
+   "niveluri": [
+    {
+     "id": "r1",
+     "titlu": "Câmpii",
+     "categorii": [
+      "campie"
+     ],
+     "tipuri": [
+      "gaseste",
+      "ce_e_aici",
+      "eticheta"
+     ]
+    },
+    {
+     "id": "r2",
+     "titlu": "Podișuri",
+     "categorii": [
+      "podis"
+     ],
+     "tipuri": [
+      "gaseste",
+      "ce_e_aici",
+      "eticheta"
+     ]
+    },
+    {
+     "id": "r3",
+     "titlu": "Munți",
+     "categorii": [
+      "munti"
+     ],
+     "tipuri": [
+      "gaseste",
+      "ce_e_aici",
+      "eticheta"
+     ]
+    },
+    {
+     "id": "r4",
+     "titlu": "Deșerturi și depresiuni",
+     "categorii": [
+      "desert",
+      "depresiune"
+     ],
+     "tipuri": [
+      "gaseste",
+      "ce_e_aici"
+     ]
+    },
+    {
+     "id": "r5",
+     "titlu": "Vârfuri și vulcani",
+     "categorii": [
+      "varf",
+      "vulcan"
+     ],
+     "tipuri": [
+      "gaseste",
+      "ce_e_aici",
+      "eticheta"
+     ]
+    },
+    {
+     "id": "r6",
+     "titlu": "Ce formă de relief este?",
+     "categorii": [
+      "campie",
+      "podis",
+      "munti",
+      "desert",
+      "depresiune"
+     ],
+     "tipuri": [
+      "clasifica"
+     ]
+    },
+    {
+     "id": "r7",
+     "titlu": "Amestec: relieful Asiei",
+     "categorii": null,
+     "tipuri": [
+      "gaseste",
+      "ce_e_aici",
+      "eticheta",
+      "clasifica"
+     ]
+    }
+   ]
+  }
+ ],
+ "categorii": {
+  "rau": "Râu",
+  "lac": "Lac",
+  "regiune_endoreica": "Regiune endoreică",
+  "mare": "Mare",
+  "golf": "Golf",
+  "ocean": "Ocean",
+  "punct_extrem": "Punct extrem",
+  "peninsula": "Peninsulă",
+  "insula": "Insulă / arhipelag",
+  "stramtoare": "Strâmtoare",
+  "linie": "Linie a rețelei geografice",
+  "vecin": "Continent vecin",
+  "campie": "Câmpie",
+  "podis": "Podiș",
+  "munti": "Munți",
+  "desert": "Deșert",
+  "depresiune": "Depresiune",
+  "varf": "Vârf montan",
+  "vulcan": "Vulcan activ sau latent"
+ },
+ "bazine": {
+  "arctic": "Oceanul Arctic",
+  "pacific": "Oceanul Pacific",
+  "indian": "Oceanul Indian",
+  "neagra": "Marea Neagră și Marea Mediterană",
+  "endoreic": "Regiune endoreică (nu ajunge la ocean)"
+ },
+ "insigne": [
+  {
+   "id": "hidrograful-siberiei",
+   "nume": "Hidrograful Siberiei",
+   "icon": "🛶",
+   "descriere": "Ai găsit toate cele 8 râuri care curg spre Oceanul Arctic.",
+   "ids": [
+    "obi",
+    "irtis",
+    "enisei",
+    "tunguska-inf",
+    "tunguska-pietr",
+    "angara",
+    "lena",
+    "kolima"
+   ]
+  },
+  {
+   "id": "cuceritorul-himalayei",
+   "nume": "Cuceritorul Himalayei",
+   "icon": "🧗",
+   "descriere": "Ai găsit Himalaya, Everestul, Podișul Tibet, Karakorum și Kunlun.",
+   "ids": [
+    "m-himalaya",
+    "v-everest",
+    "p-tibet",
+    "m-karakorum",
+    "m-kunlun"
+   ]
+  },
+  {
+   "id": "inelul-de-foc",
+   "nume": "Inelul de Foc",
+   "icon": "🌋",
+   "descriere": "Ai găsit toți cei 10 vulcani activi sau latenți de pe hartă.",
+   "ids": [
+    "vu-kliucev",
+    "vu-fuji",
+    "vu-sakura",
+    "vu-mayon",
+    "vu-pinatubo",
+    "vu-taal",
+    "vu-krakatoa",
+    "vu-merapi",
+    "vu-semeru",
+    "vu-tambora"
+   ]
+  },
+  {
+   "id": "cele-patru-vanturi",
+   "nume": "Cele patru vânturi",
+   "icon": "🧭",
+   "descriere": "Ai găsit cele patru extremități ale continentului.",
+   "ids": [
+    "cap-celiuskin",
+    "cap-dejnev",
+    "cap-baba",
+    "cap-piai"
+   ]
+  },
+  {
+   "id": "cartograful",
+   "nume": "Cartograful",
+   "icon": "🗺️",
+   "descriere": "100% la Marele Atlas.",
+   "ids": []
+  }
+ ],
+ "elemente": [
+  {
+   "id": "obi",
+   "harta": "hidrografie",
+   "nume": "Obi",
+   "categorie": "rau",
+   "geometrie": {
+    "tip": "polilinie",
+    "puncte": [
+     [
+      0.25,
+      0.23843
+     ],
+     [
+      0.24167,
+      0.27199
+     ],
+     [
+      0.255,
+      0.2963
+     ],
+     [
+      0.29167,
+      0.31019
+     ],
+     [
+      0.3125,
+      0.31944
+     ],
+     [
+      0.33333,
+      0.34028
+     ],
+     [
+      0.36417,
+      0.36227
+     ],
+     [
+      0.4,
+      0.40509
+     ]
+    ],
+    "toleranta": 0.01
+   },
+   "masti": [
+    {
+     "x": 0.25,
+     "y": 0.21528,
+     "w": 0.02,
+     "h": 0.03241,
+     "culoare": "#e0f5fc"
+    },
+    {
+     "x": 0.30167,
+     "y": 0.30324,
+     "w": 0.02333,
+     "h": 0.02315,
+     "culoare": "#e1f5fd"
+    }
+   ],
+   "info": "Împreună cu Irtîșul formează unul dintre cele mai lungi sisteme de râuri ale Asiei. Se varsă în Golful Obi, la Marea Kara.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta hidrografică a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "bazin": "arctic",
+   "regiune": "siberia"
+  },
+  {
+   "id": "irtis",
+   "harta": "hidrografie",
+   "nume": "Irtîș",
+   "categorie": "rau",
+   "geometrie": {
+    "tip": "polilinie",
+    "puncte": [
+     [
+      0.25,
+      0.28241
+     ],
+     [
+      0.26,
+      0.33333
+     ],
+     [
+      0.28083,
+      0.36111
+     ],
+     [
+      0.3125,
+      0.40509
+     ],
+     [
+      0.33333,
+      0.43403
+     ]
+    ],
+    "toleranta": 0.01
+   },
+   "masti": [
+    {
+     "x": 0.26833,
+     "y": 0.34954,
+     "w": 0.03,
+     "h": 0.02083,
+     "culoare": "#e1f5fd"
+    }
+   ],
+   "info": "Cel mai lung afluent al Obiului. Izvorăște din Munții Altai.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta hidrografică a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "bazin": "arctic",
+   "regiune": "siberia"
+  },
+  {
+   "id": "enisei",
+   "harta": "hidrografie",
+   "nume": "Enisei",
+   "categorie": "rau",
+   "geometrie": {
+    "tip": "polilinie",
+    "puncte": [
+     [
+      0.3375,
+      0.13889
+     ],
+     [
+      0.35833,
+      0.18519
+     ],
+     [
+      0.37083,
+      0.23727
+     ],
+     [
+      0.37667,
+      0.28935
+     ],
+     [
+      0.38333,
+      0.34722
+     ],
+     [
+      0.39583,
+      0.38773
+     ],
+     [
+      0.40583,
+      0.43981
+     ]
+    ],
+    "toleranta": 0.01
+   },
+   "masti": [
+    {
+     "x": 0.36333,
+     "y": 0.17593,
+     "w": 0.01833,
+     "h": 0.05324,
+     "culoare": "#e0f3fd"
+    },
+    {
+     "x": 0.395,
+     "y": 0.38542,
+     "w": 0.02,
+     "h": 0.05324,
+     "culoare": "#e0f5fd"
+    }
+   ],
+   "info": "Curge de la sud la nord prin Siberia și se varsă în Marea Kara. Primește Angara, singurul râu care iese din Lacul Baikal.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta hidrografică a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "bazin": "arctic",
+   "regiune": "siberia"
+  },
+  {
+   "id": "tunguska-inf",
+   "harta": "hidrografie",
+   "nume": "Tunguska Inferioară",
+   "categorie": "rau",
+   "geometrie": {
+    "tip": "polilinie",
+    "puncte": [
+     [
+      0.3775,
+      0.28241
+     ],
+     [
+      0.41667,
+      0.27315
+     ],
+     [
+      0.46833,
+      0.27315
+     ],
+     [
+      0.5,
+      0.28472
+     ]
+    ],
+    "toleranta": 0.00833
+   },
+   "masti": [
+    {
+     "x": 0.41167,
+     "y": 0.25926,
+     "w": 0.09167,
+     "h": 0.02315,
+     "culoare": "#e0f5fd"
+    }
+   ],
+   "info": "Afluent de dreapta al Eniseiului. Curge prin Podișul Siberiei Centrale.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta hidrografică a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "bazin": "arctic",
+   "regiune": "siberia"
+  },
+  {
+   "id": "tunguska-pietr",
+   "harta": "hidrografie",
+   "nume": "Tunguska Pietroasă",
+   "categorie": "rau",
+   "geometrie": {
+    "tip": "polilinie",
+    "puncte": [
+     [
+      0.38,
+      0.31829
+     ],
+     [
+      0.41667,
+      0.30324
+     ],
+     [
+      0.45833,
+      0.32523
+     ],
+     [
+      0.5,
+      0.34028
+     ]
+    ],
+    "toleranta": 0.00833
+   },
+   "masti": [
+    {
+     "x": 0.39333,
+     "y": 0.28704,
+     "w": 0.09,
+     "h": 0.04861,
+     "culoare": "#e0f3fd"
+    }
+   ],
+   "info": "Afluent al Eniseiului. În bazinul său a avut loc „evenimentul Tunguska” din 1908, o explozie uriașă în atmosferă.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta hidrografică a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "bazin": "arctic",
+   "regiune": "siberia"
+  },
+  {
+   "id": "angara",
+   "harta": "hidrografie",
+   "nume": "Angara",
+   "categorie": "rau",
+   "geometrie": {
+    "tip": "polilinie",
+    "puncte": [
+     [
+      0.49333,
+      0.43056
+     ],
+     [
+      0.47917,
+      0.38194
+     ],
+     [
+      0.45417,
+      0.34722
+     ],
+     [
+      0.42083,
+      0.34491
+     ],
+     [
+      0.38333,
+      0.34722
+     ]
+    ],
+    "toleranta": 0.00833
+   },
+   "masti": [
+    {
+     "x": 0.41833,
+     "y": 0.33102,
+     "w": 0.03833,
+     "h": 0.02315,
+     "culoare": "#e1f5fd"
+    }
+   ],
+   "info": "Singurul râu care iese din Lacul Baikal. Se varsă în Enisei.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta hidrografică a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "bazin": "arctic",
+   "regiune": "siberia"
+  },
+  {
+   "id": "lena",
+   "harta": "hidrografie",
+   "nume": "Lena",
+   "categorie": "rau",
+   "geometrie": {
+    "tip": "polilinie",
+    "puncte": [
+     [
+      0.58333,
+      0.12963
+     ],
+     [
+      0.59333,
+      0.17361
+     ],
+     [
+      0.6,
+      0.23148
+     ],
+     [
+      0.5875,
+      0.28356
+     ],
+     [
+      0.55833,
+      0.3125
+     ],
+     [
+      0.52917,
+      0.33565
+     ],
+     [
+      0.5125,
+      0.37037
+     ]
+    ],
+    "toleranta": 0.01
+   },
+   "masti": [
+    {
+     "x": 0.58167,
+     "y": 0.16782,
+     "w": 0.02667,
+     "h": 0.04167,
+     "culoare": "#e0f3fd"
+    },
+    {
+     "x": 0.51333,
+     "y": 0.3206,
+     "w": 0.02667,
+     "h": 0.02778,
+     "culoare": "#e1f4fd"
+    }
+   ],
+   "info": "Se varsă în Marea Laptev printr-o deltă foarte mare, înghețată o bună parte din an.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta hidrografică a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "bazin": "arctic",
+   "regiune": "siberia"
+  },
+  {
+   "id": "kolima",
+   "harta": "hidrografie",
+   "nume": "Kolîma",
+   "categorie": "rau",
+   "geometrie": {
+    "tip": "polilinie",
+    "puncte": [
+     [
+      0.76,
+      0.19907
+     ],
+     [
+      0.74833,
+      0.23727
+     ],
+     [
+      0.7375,
+      0.27778
+     ],
+     [
+      0.72917,
+      0.30671
+     ]
+    ],
+    "toleranta": 0.00833
+   },
+   "masti": [
+    {
+     "x": 0.75167,
+     "y": 0.20602,
+     "w": 0.035,
+     "h": 0.03704,
+     "culoare": "#e0f4fd"
+    }
+   ],
+   "info": "Curge prin nord-estul Siberiei și se varsă în Marea Siberiei de Est.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta hidrografică a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "bazin": "arctic",
+   "regiune": "siberia"
+  },
+  {
+   "id": "amur",
+   "harta": "hidrografie",
+   "nume": "Amur",
+   "categorie": "rau",
+   "geometrie": {
+    "tip": "polilinie",
+    "puncte": [
+     [
+      0.58333,
+      0.4456
+     ],
+     [
+      0.63333,
+      0.45139
+     ],
+     [
+      0.66667,
+      0.43981
+     ],
+     [
+      0.69,
+      0.41088
+     ],
+     [
+      0.70667,
+      0.37616
+     ]
+    ],
+    "toleranta": 0.01
+   },
+   "masti": [
+    {
+     "x": 0.675,
+     "y": 0.40741,
+     "w": 0.02833,
+     "h": 0.03935,
+     "culoare": "#fbf49a"
+    }
+   ],
+   "info": "Pe o mare parte a cursului desparte Rusia de China. Se varsă în strâmtoarea dintre continent și Insula Sahalin.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta hidrografică a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "bazin": "pacific",
+   "regiune": "est"
+  },
+  {
+   "id": "huang-he",
+   "harta": "hidrografie",
+   "nume": "Huang He",
+   "categorie": "rau",
+   "geometrie": {
+    "tip": "polilinie",
+    "puncte": [
+     [
+      0.46667,
+      0.59606
+     ],
+     [
+      0.5,
+      0.57639
+     ],
+     [
+      0.525,
+      0.5787
+     ],
+     [
+      0.55,
+      0.58796
+     ],
+     [
+      0.575,
+      0.5787
+     ]
+    ],
+    "toleranta": 0.01
+   },
+   "masti": [
+    {
+     "x": 0.51,
+     "y": 0.56713,
+     "w": 0.05833,
+     "h": 0.04398,
+     "culoare": "#fcf498"
+    }
+   ],
+   "info": "„Fluviul Galben”: culoarea vine de la loessul pe care îl cară. Se varsă în Marea Galbenă.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta hidrografică a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "bazin": "pacific",
+   "regiune": "est"
+  },
+  {
+   "id": "chang-jiang",
+   "harta": "hidrografie",
+   "nume": "Chang Jiang (Yangtze)",
+   "categorie": "rau",
+   "geometrie": {
+    "tip": "polilinie",
+    "puncte": [
+     [
+      0.43333,
+      0.64236
+     ],
+     [
+      0.46667,
+      0.65741
+     ],
+     [
+      0.5,
+      0.66551
+     ],
+     [
+      0.53333,
+      0.65972
+     ],
+     [
+      0.5625,
+      0.65394
+     ]
+    ],
+    "toleranta": 0.01
+   },
+   "masti": [
+    {
+     "x": 0.47667,
+     "y": 0.62847,
+     "w": 0.05667,
+     "h": 0.0463,
+     "culoare": "#fdf397"
+    }
+   ],
+   "info": "Cel mai lung fluviu al Asiei. Pe el se află barajul Trei Defileuri.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta hidrografică a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "bazin": "pacific",
+   "regiune": "est"
+  },
+  {
+   "id": "mekong",
+   "harta": "hidrografie",
+   "nume": "Mekong",
+   "categorie": "rau",
+   "geometrie": {
+    "tip": "polilinie",
+    "puncte": [
+     [
+      0.46667,
+      0.64815
+     ],
+     [
+      0.475,
+      0.70602
+     ],
+     [
+      0.48333,
+      0.75231
+     ],
+     [
+      0.49167,
+      0.81019
+     ],
+     [
+      0.5,
+      0.85069
+     ]
+    ],
+    "toleranta": 0.01
+   },
+   "masti": [
+    {
+     "x": 0.47917,
+     "y": 0.75231,
+     "w": 0.02167,
+     "h": 0.05556,
+     "culoare": "#fbf499"
+    }
+   ],
+   "info": "Străbate mai multe țări din Peninsula Indochina și formează o deltă întinsă în Vietnam.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta hidrografică a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "bazin": "pacific",
+   "regiune": "sud-est"
+  },
+  {
+   "id": "indus",
+   "harta": "hidrografie",
+   "nume": "Indus",
+   "categorie": "rau",
+   "geometrie": {
+    "tip": "polilinie",
+    "puncte": [
+     [
+      0.24167,
+      0.59606
+     ],
+     [
+      0.25417,
+      0.63657
+     ],
+     [
+      0.25,
+      0.67708
+     ],
+     [
+      0.2375,
+      0.70833
+     ]
+    ],
+    "toleranta": 0.01
+   },
+   "masti": [
+    {
+     "x": 0.24667,
+     "y": 0.63657,
+     "w": 0.02167,
+     "h": 0.04167,
+     "culoare": "#c7d96c"
+    }
+   ],
+   "info": "Izvorăște din Podișul Tibet și se varsă în Marea Arabiei. În valea lui a apărut o civilizație foarte veche.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta hidrografică a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "bazin": "indian",
+   "regiune": "sud"
+  },
+  {
+   "id": "gange",
+   "harta": "hidrografie",
+   "nume": "Gange",
+   "categorie": "rau",
+   "geometrie": {
+    "tip": "polilinie",
+    "puncte": [
+     [
+      0.3,
+      0.64236
+     ],
+     [
+      0.33333,
+      0.66551
+     ],
+     [
+      0.36667,
+      0.68287
+     ],
+     [
+      0.39167,
+      0.69444
+     ]
+    ],
+    "toleranta": 0.01
+   },
+   "masti": [
+    {
+     "x": 0.32833,
+     "y": 0.67708,
+     "w": 0.03333,
+     "h": 0.02315,
+     "culoare": "#c6d96d"
+    }
+   ],
+   "info": "Fluviu sfânt pentru hinduși. Împreună cu Brahmaputra formează o deltă uriașă la Golful Bengal.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta hidrografică a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "bazin": "indian",
+   "regiune": "sud"
+  },
+  {
+   "id": "brahmaputra",
+   "harta": "hidrografie",
+   "nume": "Brahmaputra",
+   "categorie": "rau",
+   "geometrie": {
+    "tip": "polilinie",
+    "puncte": [
+     [
+      0.325,
+      0.63079
+     ],
+     [
+      0.36667,
+      0.63426
+     ],
+     [
+      0.4125,
+      0.64236
+     ],
+     [
+      0.41667,
+      0.66551
+     ],
+     [
+      0.4,
+      0.68866
+     ]
+    ],
+    "toleranta": 0.01
+   },
+   "masti": [
+    {
+     "x": 0.35667,
+     "y": 0.64352,
+     "w": 0.06333,
+     "h": 0.02315,
+     "culoare": "#b9d186"
+    }
+   ],
+   "info": "Izvorăște din Tibet, ocolește Himalaya prin est și se unește cu Gangele.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta hidrografică a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "bazin": "indian",
+   "regiune": "sud"
+  },
+  {
+   "id": "irrawaddy",
+   "harta": "hidrografie",
+   "nume": "Irrawaddy",
+   "categorie": "rau",
+   "geometrie": {
+    "tip": "polilinie",
+    "puncte": [
+     [
+      0.4125,
+      0.66551
+     ],
+     [
+      0.41667,
+      0.70602
+     ],
+     [
+      0.41833,
+      0.75231
+     ]
+    ],
+    "toleranta": 0.01
+   },
+   "masti": [
+    {
+     "x": 0.41083,
+     "y": 0.67708,
+     "w": 0.01667,
+     "h": 0.06366,
+     "culoare": "#c6d96e"
+    }
+   ],
+   "info": "Principalul fluviu al Myanmarului. Se varsă în Oceanul Indian.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta hidrografică a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "bazin": "indian",
+   "regiune": "sud-est"
+  },
+  {
+   "id": "tigru",
+   "harta": "hidrografie",
+   "nume": "Tigru",
+   "categorie": "rau",
+   "geometrie": {
+    "tip": "polilinie",
+    "puncte": [
+     [
+      0.09833,
+      0.57639
+     ],
+     [
+      0.1125,
+      0.60185
+     ],
+     [
+      0.12917,
+      0.63657
+     ],
+     [
+      0.1375,
+      0.66204
+     ]
+    ],
+    "toleranta": 0.00833
+   },
+   "masti": [
+    {
+     "x": 0.09,
+     "y": 0.57176,
+     "w": 0.02667,
+     "h": 0.05556,
+     "culoare": "#c6da6d"
+    }
+   ],
+   "info": "Se unește cu Eufratul înainte de vărsarea în Golful Persic. Între cele două râuri se află Mesopotamia.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta hidrografică a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "bazin": "indian",
+   "regiune": "vest"
+  },
+  {
+   "id": "eufrat",
+   "harta": "hidrografie",
+   "nume": "Eufrat",
+   "categorie": "rau",
+   "geometrie": {
+    "tip": "polilinie",
+    "puncte": [
+     [
+      0.07667,
+      0.5787
+     ],
+     [
+      0.09167,
+      0.60764
+     ],
+     [
+      0.11667,
+      0.64236
+     ],
+     [
+      0.13333,
+      0.66551
+     ]
+    ],
+    "toleranta": 0.00833
+   },
+   "masti": [
+    {
+     "x": 0.07167,
+     "y": 0.57176,
+     "w": 0.02333,
+     "h": 0.03009,
+     "culoare": "#c7da6b"
+    }
+   ],
+   "info": "Cel mai lung râu din vestul Asiei. Împreună cu Tigrul delimitează Mesopotamia.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta hidrografică a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "bazin": "indian",
+   "regiune": "vest"
+  },
+  {
+   "id": "sir-daria",
+   "harta": "hidrografie",
+   "nume": "Sîr-Daria",
+   "categorie": "rau",
+   "geometrie": {
+    "tip": "polilinie",
+    "puncte": [
+     [
+      0.20667,
+      0.47222
+     ],
+     [
+      0.225,
+      0.48611
+     ],
+     [
+      0.25,
+      0.50926
+     ],
+     [
+      0.27917,
+      0.53241
+     ]
+    ],
+    "toleranta": 0.00833
+   },
+   "masti": [
+    {
+     "x": 0.22083,
+     "y": 0.46528,
+     "w": 0.04,
+     "h": 0.0463,
+     "culoare": "#fbe9d2"
+    }
+   ],
+   "info": "Se varsă în Lacul Aral. Apele lui sunt folosite intens pentru irigații.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta hidrografică a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "bazin": "endoreic",
+   "regiune": "centru"
+  },
+  {
+   "id": "amu-daria",
+   "harta": "hidrografie",
+   "nume": "Amu-Daria",
+   "categorie": "rau",
+   "geometrie": {
+    "tip": "polilinie",
+    "puncte": [
+     [
+      0.2,
+      0.49537
+     ],
+     [
+      0.22083,
+      0.53009
+     ],
+     [
+      0.24583,
+      0.56134
+     ],
+     [
+      0.27083,
+      0.58449
+     ]
+    ],
+    "toleranta": 0.00833
+   },
+   "masti": [
+    {
+     "x": 0.22083,
+     "y": 0.54282,
+     "w": 0.03833,
+     "h": 0.03704,
+     "culoare": "#fce9d3"
+    }
+   ],
+   "info": "Izvorăște din Pamir. Folosirea apelor pentru irigații a contribuit la micșorarea Lacului Aral.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta hidrografică a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "bazin": "endoreic",
+   "regiune": "centru"
+  },
+  {
+   "id": "ural-rau",
+   "harta": "hidrografie",
+   "nume": "Ural (râul)",
+   "categorie": "rau",
+   "geometrie": {
+    "tip": "polilinie",
+    "puncte": [
+     [
+      0.17083,
+      0.39931
+     ],
+     [
+      0.16667,
+      0.43403
+     ],
+     [
+      0.15417,
+      0.46875
+     ],
+     [
+      0.14333,
+      0.4919
+     ]
+    ],
+    "toleranta": 0.00833
+   },
+   "masti": [
+    {
+     "x": 0.14833,
+     "y": 0.42824,
+     "w": 0.02667,
+     "h": 0.02546,
+     "culoare": "#dedde1"
+    }
+   ],
+   "info": "Pe o parte din curs este considerat limita dintre Europa și Asia. Se varsă în Marea Caspică.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta hidrografică a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "bazin": "endoreic",
+   "regiune": "centru"
+  },
+  {
+   "id": "baikal",
+   "harta": "hidrografie",
+   "nume": "Lacul Baikal",
+   "categorie": "lac",
+   "geometrie": {
+    "tip": "polilinie",
+    "puncte": [
+     [
+      0.49833,
+      0.43403
+     ],
+     [
+      0.50667,
+      0.40741
+     ],
+     [
+      0.51833,
+      0.38194
+     ]
+    ],
+    "toleranta": 0.00833
+   },
+   "masti": [
+    {
+     "x": 0.48333,
+     "y": 0.40046,
+     "w": 0.03667,
+     "h": 0.0463,
+     "culoare": "#e0f5fc"
+    }
+   ],
+   "info": "Cel mai adânc lac de pe Terra (peste 1 600 m) și cea mai mare rezervă de apă dulce lichidă de la suprafață.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta hidrografică a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "siberia"
+  },
+  {
+   "id": "aral",
+   "harta": "hidrografie",
+   "nume": "Lacul Aral",
+   "categorie": "lac",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.19,
+     0.46065
+    ],
+    "r": 0.01333
+   },
+   "masti": [
+    {
+     "x": 0.17333,
+     "y": 0.46759,
+     "w": 0.03333,
+     "h": 0.04398,
+     "culoare": "#fae9d0"
+    }
+   ],
+   "info": "S-a micșorat foarte mult după 1960, pentru că apa râurilor Amu-Daria și Sîr-Daria a fost folosită la irigații.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta hidrografică a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "centru"
+  },
+  {
+   "id": "balhas",
+   "harta": "hidrografie",
+   "nume": "Lacul Balhaș",
+   "categorie": "lac",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.30417,
+     0.47685
+    ],
+    "r": 0.01333
+   },
+   "masti": [
+    {
+     "x": 0.29083,
+     "y": 0.48727,
+     "w": 0.03833,
+     "h": 0.03704,
+     "culoare": "#f8e8d0"
+    }
+   ],
+   "info": "Are o parte vestică cu apă dulce și o parte estică cu apă sărată.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta hidrografică a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "centru"
+  },
+  {
+   "id": "caspica",
+   "harta": "hidrografie",
+   "nume": "Marea Caspică",
+   "categorie": "lac",
+   "geometrie": {
+    "tip": "polilinie",
+    "puncte": [
+     [
+      0.14333,
+      0.4919
+     ],
+     [
+      0.15167,
+      0.54398
+     ],
+     [
+      0.165,
+      0.59606
+     ]
+    ],
+    "toleranta": 0.015
+   },
+   "masti": [
+    {
+     "x": 0.13,
+     "y": 0.49074,
+     "w": 0.04333,
+     "h": 0.11343,
+     "culoare": "#fbe9d3"
+    }
+   ],
+   "info": "Cel mai întins lac de pe Terra. Are apă sărată și nu comunică cu oceanul.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta hidrografică a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "centru"
+  },
+  {
+   "id": "endo-aralo",
+   "harta": "hidrografie",
+   "nume": "Regiunea endoreică aralo-caspică",
+   "categorie": "regiune_endoreica",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.20417,
+     0.58449
+    ],
+    "r": 0.04583
+   },
+   "masti": [
+    {
+     "x": 0.16833,
+     "y": 0.55787,
+     "w": 0.08,
+     "h": 0.07407,
+     "culoare": "#fae8d3"
+    }
+   ],
+   "info": "Râurile de aici nu ajung la ocean: se varsă în Marea Caspică și în Lacul Aral sau se pierd în deșert.",
+   "valoare": null,
+   "dificultate": 2,
+   "verificat": false,
+   "sursa": "Harta hidrografică a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "centru"
+  },
+  {
+   "id": "endo-central",
+   "harta": "hidrografie",
+   "nume": "Regiunea endoreică central-asiatică",
+   "categorie": "regiune_endoreica",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.43333,
+     0.52083
+    ],
+    "r": 0.06667
+   },
+   "masti": [
+    {
+     "x": 0.35833,
+     "y": 0.49537,
+     "w": 0.13167,
+     "h": 0.06019,
+     "culoare": "#fbe9d2"
+    }
+   ],
+   "info": "Cuprinde deșerturi și depresiuni închise între munți înalți; apele se pierd în nisipuri sau în lacuri sărate.",
+   "valoare": null,
+   "dificultate": 2,
+   "verificat": false,
+   "sursa": "Harta hidrografică a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "centru"
+  },
+  {
+   "id": "endo-araba",
+   "harta": "hidrografie",
+   "nume": "Regiunea endoreică arabă",
+   "categorie": "regiune_endoreica",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.11667,
+     0.71759
+    ],
+    "r": 0.0375
+   },
+   "masti": [
+    {
+     "x": 0.08333,
+     "y": 0.68287,
+     "w": 0.07,
+     "h": 0.07407,
+     "culoare": "#fae9d3"
+    }
+   ],
+   "info": "Deșert fără râuri permanente: apele rare ale ploilor se evaporă sau se infiltrează.",
+   "valoare": null,
+   "dificultate": 2,
+   "verificat": false,
+   "sursa": "Harta hidrografică a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "vest"
+  },
+  {
+   "id": "h-kara",
+   "harta": "hidrografie",
+   "nume": "Marea Kara",
+   "categorie": "mare",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.275,
+     0.12731
+    ],
+    "r": 0.025
+   },
+   "masti": [
+    {
+     "x": 0.25,
+     "y": 0.09028,
+     "w": 0.09,
+     "h": 0.05556,
+     "culoare": "#cfebf9"
+    }
+   ],
+   "info": "Mare a Oceanului Arctic, în care se varsă Obi și Enisei.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta hidrografică a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "nord"
+  },
+  {
+   "id": "h-laptev",
+   "harta": "hidrografie",
+   "nume": "Marea Laptev",
+   "categorie": "mare",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.6,
+     0.10995
+    ],
+    "r": 0.03333
+   },
+   "masti": [
+    {
+     "x": 0.54583,
+     "y": 0.09954,
+     "w": 0.1125,
+     "h": 0.03935,
+     "culoare": "#ceebf8"
+    }
+   ],
+   "info": "Mare a Oceanului Arctic, între Peninsula Taimîr și Insulele Noua Siberie. Aici se varsă Lena.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta hidrografică a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "nord"
+  },
+  {
+   "id": "h-siberiei-est",
+   "harta": "hidrografie",
+   "nume": "Marea Siberiei de Est",
+   "categorie": "mare",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.8,
+     0.12731
+    ],
+    "r": 0.0375
+   },
+   "masti": [
+    {
+     "x": 0.71667,
+     "y": 0.11806,
+     "w": 0.075,
+     "h": 0.03472,
+     "culoare": "#ceebf8"
+    },
+    {
+     "x": 0.7875,
+     "y": 0.1331,
+     "w": 0.10417,
+     "h": 0.06366,
+     "culoare": "#cfebf8"
+    }
+   ],
+   "info": "Mare a Oceanului Arctic, acoperită de gheață cea mai mare parte a anului.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta hidrografică a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "nord"
+  },
+  {
+   "id": "h-ciukotsk",
+   "harta": "hidrografie",
+   "nume": "Marea Ciukotsk",
+   "categorie": "mare",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.95,
+     0.17361
+    ],
+    "r": 0.03333
+   },
+   "masti": [
+    {
+     "x": 0.92833,
+     "y": 0.17593,
+     "w": 0.07167,
+     "h": 0.06944,
+     "culoare": "#cdeaf8"
+    }
+   ],
+   "info": "Între Asia și America de Nord, la nord de Strâmtoarea Bering.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta hidrografică a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "nord"
+  },
+  {
+   "id": "h-ohotsk",
+   "harta": "hidrografie",
+   "nume": "Marea Ohotsk",
+   "categorie": "mare",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.73333,
+     0.37037
+    ],
+    "r": 0.0375
+   },
+   "masti": [
+    {
+     "x": 0.67833,
+     "y": 0.36458,
+     "w": 0.11667,
+     "h": 0.05787,
+     "culoare": "#cfebf9"
+    }
+   ],
+   "info": "Mărginită de Peninsula Kamciatka, Insulele Kurile și Sahalin. Iarna îngheață în mare parte.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta hidrografică a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "est"
+  },
+  {
+   "id": "h-japoniei",
+   "harta": "hidrografie",
+   "nume": "Marea Japoniei",
+   "categorie": "mare",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.66667,
+     0.54398
+    ],
+    "r": 0.025
+   },
+   "masti": [
+    {
+     "x": 0.64167,
+     "y": 0.57639,
+     "w": 0.03333,
+     "h": 0.05787,
+     "culoare": "#cdeaf8"
+    },
+    {
+     "x": 0.65833,
+     "y": 0.48843,
+     "w": 0.05167,
+     "h": 0.09722,
+     "culoare": "#cdeaf8"
+    }
+   ],
+   "info": "Între Arhipelagul Japonez și continent.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta hidrografică a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "est"
+  },
+  {
+   "id": "h-galbena",
+   "harta": "hidrografie",
+   "nume": "Marea Galbenă",
+   "categorie": "mare",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.58333,
+     0.58449
+    ],
+    "r": 0.015
+   },
+   "masti": [
+    {
+     "x": 0.58167,
+     "y": 0.55556,
+     "w": 0.02167,
+     "h": 0.08565,
+     "culoare": "#cbeaf7"
+    }
+   ],
+   "info": "Numele vine de la apele încărcate cu aluviuni gălbui aduse de Huang He.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta hidrografică a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "est"
+  },
+  {
+   "id": "h-chinei-est",
+   "harta": "hidrografie",
+   "nume": "Marea Chinei de Est",
+   "categorie": "mare",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.6125,
+     0.66551
+    ],
+    "r": 0.01833
+   },
+   "masti": [
+    {
+     "x": 0.60167,
+     "y": 0.625,
+     "w": 0.04167,
+     "h": 0.12153,
+     "culoare": "#4dbcea"
+    }
+   ],
+   "info": "Între China, Coreea de Sud, Japonia și Taiwan.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta hidrografică a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "est"
+  },
+  {
+   "id": "h-chinei-sud",
+   "harta": "hidrografie",
+   "nume": "Marea Chinei de Sud",
+   "categorie": "mare",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.54167,
+     0.79861
+    ],
+    "r": 0.03333
+   },
+   "masti": [
+    {
+     "x": 0.48333,
+     "y": 0.79861,
+     "w": 0.04167,
+     "h": 0.09259,
+     "culoare": "#ceebf8"
+    },
+    {
+     "x": 0.5125,
+     "y": 0.74074,
+     "w": 0.04167,
+     "h": 0.08102,
+     "culoare": "#9bd5f4"
+    },
+    {
+     "x": 0.54583,
+     "y": 0.71759,
+     "w": 0.04167,
+     "h": 0.05787,
+     "culoare": "#ccebfa"
+    }
+   ],
+   "info": "Mare întinsă între Indochina, Filipine și Borneo, cu multe insule mici.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta hidrografică a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "sud-est"
+  },
+  {
+   "id": "h-arabiei",
+   "harta": "hidrografie",
+   "nume": "Marea Arabiei",
+   "categorie": "mare",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.21667,
+     0.76389
+    ],
+    "r": 0.03333
+   },
+   "masti": [
+    {
+     "x": 0.20333,
+     "y": 0.73495,
+     "w": 0.06,
+     "h": 0.04167,
+     "culoare": "#98d5f4"
+    }
+   ],
+   "info": "Parte a Oceanului Indian, între Peninsula Arabia și Peninsula India. Aici se varsă Indusul.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta hidrografică a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "sud"
+  },
+  {
+   "id": "h-rosie",
+   "harta": "hidrografie",
+   "nume": "Marea Roșie",
+   "categorie": "mare",
+   "geometrie": {
+    "tip": "polilinie",
+    "puncte": [
+     [
+      0.05833,
+      0.67708
+     ],
+     [
+      0.07917,
+      0.74074
+     ],
+     [
+      0.09833,
+      0.79861
+     ]
+    ],
+    "toleranta": 0.01167
+   },
+   "masti": [
+    {
+     "x": 0.04667,
+     "y": 0.65972,
+     "w": 0.03333,
+     "h": 0.06944,
+     "culoare": "#dbdbdd"
+    },
+    {
+     "x": 0.06667,
+     "y": 0.72338,
+     "w": 0.03667,
+     "h": 0.08333,
+     "culoare": "#dbdbdd"
+    }
+   ],
+   "info": "Desparte Asia de Africa. Comunică cu Marea Mediterană prin Canalul Suez.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta hidrografică a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "vest"
+  },
+  {
+   "id": "h-neagra",
+   "harta": "hidrografie",
+   "nume": "Marea Neagră",
+   "categorie": "mare",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.05417,
+     0.53819
+    ],
+    "r": 0.02333
+   },
+   "masti": [
+    {
+     "x": 0.01333,
+     "y": 0.51389,
+     "w": 0.08333,
+     "h": 0.03009,
+     "culoare": "#a0dbfa"
+    }
+   ],
+   "info": "Mare interioară la limita dintre Europa și Asia. România are ieșire la ea.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta hidrografică a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "vest"
+  },
+  {
+   "id": "h-mediterana",
+   "harta": "hidrografie",
+   "nume": "Marea Mediterană",
+   "categorie": "mare",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.03333,
+     0.625
+    ],
+    "r": 0.01833
+   },
+   "masti": [
+    {
+     "x": 0.0,
+     "y": 0.59491,
+     "w": 0.06,
+     "h": 0.04167,
+     "culoare": "#cceafa"
+    }
+   ],
+   "info": "Comunică cu Oceanul Atlantic prin Strâmtoarea Gibraltar.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta hidrografică a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "vest"
+  },
+  {
+   "id": "h-g-persic",
+   "harta": "hidrografie",
+   "nume": "Golful Persic",
+   "categorie": "golf",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.15,
+     0.66551
+    ],
+    "r": 0.01333
+   },
+   "masti": [
+    {
+     "x": 0.13,
+     "y": 0.64352,
+     "w": 0.05,
+     "h": 0.06019,
+     "culoare": "#c6da6d"
+    }
+   ],
+   "info": "Golf al Oceanului Indian; în jurul lui se află mari zăcăminte de petrol. Aici se varsă Tigrul și Eufratul.",
+   "valoare": null,
+   "dificultate": 2,
+   "verificat": false,
+   "sursa": "Harta hidrografică a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "vest"
+  },
+  {
+   "id": "h-g-bengal",
+   "harta": "hidrografie",
+   "nume": "Golful Bengal",
+   "categorie": "golf",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.36667,
+     0.77546
+    ],
+    "r": 0.02917
+   },
+   "masti": [
+    {
+     "x": 0.34667,
+     "y": 0.76736,
+     "w": 0.055,
+     "h": 0.04167,
+     "culoare": "#99d5f4"
+    }
+   ],
+   "info": "Considerat cel mai mare golf de pe Terra. Aici se varsă Gangele și Brahmaputra.",
+   "valoare": null,
+   "dificultate": 2,
+   "verificat": false,
+   "sursa": "Harta hidrografică a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "sud"
+  },
+  {
+   "id": "h-oc-arctic",
+   "harta": "hidrografie",
+   "nume": "Oceanul Arctic",
+   "categorie": "ocean",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.45833,
+     0.03472
+    ],
+    "r": 0.05833
+   },
+   "masti": [
+    {
+     "x": 0.25,
+     "y": 0.01157,
+     "w": 0.16,
+     "h": 0.04861,
+     "culoare": "#cfebf9"
+    },
+    {
+     "x": 0.53833,
+     "y": 0.01389,
+     "w": 0.13167,
+     "h": 0.0463,
+     "culoare": "#9bd5f4"
+    }
+   ],
+   "info": "Cel mai mic și cel mai rece ocean; în el se varsă marile râuri ale Siberiei.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta hidrografică a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "nord"
+  },
+  {
+   "id": "h-oc-pacific",
+   "harta": "hidrografie",
+   "nume": "Oceanul Pacific",
+   "categorie": "ocean",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.81667,
+     0.61343
+    ],
+    "r": 0.06667
+   },
+   "masti": [
+    {
+     "x": 0.70417,
+     "y": 0.57292,
+     "w": 0.22083,
+     "h": 0.03704,
+     "culoare": "#4fbce9"
+    },
+    {
+     "x": 0.76,
+     "y": 0.6169,
+     "w": 0.15,
+     "h": 0.03704,
+     "culoare": "#50bce9"
+    }
+   ],
+   "info": "Cel mai mare ocean de pe Terra. Spre el curg Amurul, Huang He, Chang Jiang și Mekongul.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta hidrografică a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "est"
+  },
+  {
+   "id": "h-oc-indian",
+   "harta": "hidrografie",
+   "nume": "Oceanul Indian",
+   "categorie": "ocean",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.275,
+     0.90278
+    ],
+    "r": 0.06667
+   },
+   "masti": [
+    {
+     "x": 0.12917,
+     "y": 0.8912,
+     "w": 0.075,
+     "h": 0.07523,
+     "culoare": "#4fbce9"
+    },
+    {
+     "x": 0.19167,
+     "y": 0.85069,
+     "w": 0.06667,
+     "h": 0.06366,
+     "culoare": "#4fbce9"
+    },
+    {
+     "x": 0.24167,
+     "y": 0.82407,
+     "w": 0.05833,
+     "h": 0.04861,
+     "culoare": "#4ebce9"
+    },
+    {
+     "x": 0.33333,
+     "y": 0.84259,
+     "w": 0.05833,
+     "h": 0.06366,
+     "culoare": "#4dbcea"
+    },
+    {
+     "x": 0.38333,
+     "y": 0.90278,
+     "w": 0.06667,
+     "h": 0.09259,
+     "culoare": "#4dbcea"
+    }
+   ],
+   "info": "Spre el curg Indusul, Gangele, Brahmaputra, Tigrul și Eufratul.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta hidrografică a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "sud"
+  },
+  {
+   "id": "cap-celiuskin",
+   "harta": "pozitie",
+   "nume": "Capul Celiuskin (extremitatea nordică a continentului)",
+   "categorie": "punct_extrem",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.475,
+     0.14044
+    ],
+    "r": 0.014
+   },
+   "masti": [
+    {
+     "x": 0.452,
+     "y": 0.05462,
+     "w": 0.05,
+     "h": 0.08062,
+     "culoare": "#fcfdfc"
+    }
+   ],
+   "info": "Cel mai nordic punct al continentului asiatic, în Peninsula Taimîr (aproximativ 77°43′ N).",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "nord",
+   "extrem": "N"
+  },
+  {
+   "id": "cap-dejnev",
+   "harta": "pozitie",
+   "nume": "Capul Dejnev (extremitatea estică)",
+   "categorie": "punct_extrem",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.952,
+     0.30689
+    ],
+    "r": 0.014
+   },
+   "masti": [
+    {
+     "x": 0.936,
+     "y": 0.21456,
+     "w": 0.056,
+     "h": 0.08843,
+     "culoare": "#fbfcfb"
+    }
+   ],
+   "info": "Cel mai estic punct al Asiei, în Peninsula Ciukotka, la Strâmtoarea Bering (aproximativ 169°40′ V).",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "est",
+   "extrem": "E"
+  },
+  {
+   "id": "cap-baba",
+   "harta": "pozitie",
+   "nume": "Capul Baba (extremitatea vestică)",
+   "categorie": "punct_extrem",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.03,
+     0.57217
+    ],
+    "r": 0.014
+   },
+   "masti": [
+    {
+     "x": 0.012,
+     "y": 0.48114,
+     "w": 0.04,
+     "h": 0.09103,
+     "culoare": "#fbfcfb"
+    }
+   ],
+   "info": "Cel mai vestic punct al Asiei, în Peninsula Asia Mică (aproximativ 26°04′ E).",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "vest",
+   "extrem": "V"
+  },
+  {
+   "id": "cap-piai",
+   "harta": "pozitie",
+   "nume": "Capul Piai (extremitatea sudică a continentului)",
+   "categorie": "punct_extrem",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.472,
+     0.87776
+    ],
+    "r": 0.014
+   },
+   "masti": [
+    {
+     "x": 0.452,
+     "y": 0.79974,
+     "w": 0.042,
+     "h": 0.07802,
+     "culoare": "#f9fbfa"
+    }
+   ],
+   "info": "Cel mai sudic punct al continentului asiatic, în Peninsula Malacca (aproximativ 1°16′ N).",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "sud-est",
+   "extrem": "S"
+  },
+  {
+   "id": "extrem-n-insular",
+   "harta": "pozitie",
+   "nume": "Extremitatea nordică insulară (Severnaia Zemlia)",
+   "categorie": "punct_extrem",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.425,
+     0.08453
+    ],
+    "r": 0.014
+   },
+   "masti": [
+    {
+     "x": 0.4,
+     "y": 0.0,
+     "w": 0.05,
+     "h": 0.08062,
+     "culoare": "#fbfcfb"
+    },
+    {
+     "x": 0.338,
+     "y": 0.11704,
+     "w": 0.112,
+     "h": 0.03901,
+     "culoare": "#fafdfc"
+    }
+   ],
+   "info": "Punctul cel mai nordic al Asiei, dacă socotim și insulele, se află în arhipelagul Severnaia Zemlia.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "nord",
+   "extrem": "N"
+  },
+  {
+   "id": "extrem-s-insular",
+   "harta": "pozitie",
+   "nume": "Insula Roti (extremitatea sudică insulară)",
+   "categorie": "punct_extrem",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.578,
+     0.96749
+    ],
+    "r": 0.014
+   },
+   "masti": [
+    {
+     "x": 0.562,
+     "y": 0.89467,
+     "w": 0.042,
+     "h": 0.07282,
+     "culoare": "#f9fbfa"
+    }
+   ],
+   "info": "Punctul cel mai sudic al Asiei, dacă socotim și insulele: Insula Roti, la sud-vest de Timor, în Arhipelagul Indonezian.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "sud-est",
+   "extrem": "S"
+  },
+  {
+   "id": "pen-iamal",
+   "harta": "pozitie",
+   "nume": "Peninsula Iamal",
+   "categorie": "peninsula",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.285,
+     0.24057
+    ],
+    "r": 0.022
+   },
+   "masti": [
+    {
+     "x": 0.266,
+     "y": 0.19766,
+     "w": 0.028,
+     "h": 0.08583,
+     "culoare": "#fbfdfd"
+    }
+   ],
+   "info": "Peninsulă din nordul Siberiei de Vest, între Marea Kara și Golful Obi, cu mari zăcăminte de gaze naturale.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "nord"
+  },
+  {
+   "id": "pen-taimir",
+   "harta": "pozitie",
+   "nume": "Peninsula Taimîr",
+   "categorie": "peninsula",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.48,
+     0.16255
+    ],
+    "r": 0.028
+   },
+   "masti": [
+    {
+     "x": 0.444,
+     "y": 0.15865,
+     "w": 0.082,
+     "h": 0.02861,
+     "culoare": "#f9e9d1"
+    }
+   ],
+   "info": "Cea mai nordică peninsulă a Asiei. Aici se află Capul Celiuskin.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "nord"
+  },
+  {
+   "id": "pen-ciukotka",
+   "harta": "pozitie",
+   "nume": "Peninsula Ciukotka",
+   "categorie": "peninsula",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.925,
+     0.28869
+    ],
+    "r": 0.02
+   },
+   "masti": [
+    {
+     "x": 0.896,
+     "y": 0.26788,
+     "w": 0.052,
+     "h": 0.04161,
+     "culoare": "#fbfcfc"
+    }
+   ],
+   "info": "În extremitatea nord-estică a Asiei. Aici se află Capul Dejnev.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "est"
+  },
+  {
+   "id": "pen-kamciatka",
+   "harta": "pozitie",
+   "nume": "Peninsula Kamciatka",
+   "categorie": "peninsula",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.795,
+     0.39012
+    ],
+    "r": 0.024
+   },
+   "masti": [
+    {
+     "x": 0.77,
+     "y": 0.3407,
+     "w": 0.06,
+     "h": 0.08583,
+     "culoare": "#f8fcfb"
+    }
+   ],
+   "info": "Peninsulă cu mulți vulcani activi, între Marea Ohotsk și Oceanul Pacific.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "est"
+  },
+  {
+   "id": "pen-coreea",
+   "harta": "pozitie",
+   "nume": "Peninsula Coreea",
+   "categorie": "peninsula",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.595,
+     0.59168
+    ],
+    "r": 0.014
+   },
+   "masti": [
+    {
+     "x": 0.577,
+     "y": 0.56957,
+     "w": 0.03,
+     "h": 0.03901,
+     "culoare": "#f8fcfb"
+    }
+   ],
+   "info": "Între Marea Galbenă și Marea Japoniei.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "est"
+  },
+  {
+   "id": "pen-indochina",
+   "harta": "pozitie",
+   "nume": "Peninsula Indochina",
+   "categorie": "peninsula",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.48,
+     0.78023
+    ],
+    "r": 0.03
+   },
+   "masti": [
+    {
+     "x": 0.444,
+     "y": 0.73862,
+     "w": 0.058,
+     "h": 0.06762,
+     "culoare": "#f8e9d0"
+    }
+   ],
+   "info": "Peninsulă din sud-estul Asiei, străbătută de Mekong.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "sud-est"
+  },
+  {
+   "id": "pen-malacca",
+   "harta": "pozitie",
+   "nume": "Peninsula Malacca",
+   "categorie": "peninsula",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.455,
+     0.84525
+    ],
+    "r": 0.016
+   },
+   "masti": [
+    {
+     "x": 0.434,
+     "y": 0.78023,
+     "w": 0.04,
+     "h": 0.08843,
+     "culoare": "#fafdfb"
+    }
+   ],
+   "info": "Peninsulă lungă și îngustă; la capătul ei sudic se află Capul Piai.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "sud-est"
+  },
+  {
+   "id": "pen-india",
+   "harta": "pozitie",
+   "nume": "Peninsula India (Hindustan)",
+   "categorie": "peninsula",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.325,
+     0.78023
+    ],
+    "r": 0.035
+   },
+   "masti": [
+    {
+     "x": 0.294,
+     "y": 0.73082,
+     "w": 0.046,
+     "h": 0.03641,
+     "culoare": "#f9e8d2"
+    }
+   ],
+   "info": "Peninsulă de formă triunghiulară, ocupată în mare parte de Podișul Deccan.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "sud"
+  },
+  {
+   "id": "pen-arabia",
+   "harta": "pozitie",
+   "nume": "Peninsula Arabia",
+   "categorie": "peninsula",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.13,
+     0.72172
+    ],
+    "r": 0.04
+   },
+   "masti": [
+    {
+     "x": 0.104,
+     "y": 0.6749,
+     "w": 0.06,
+     "h": 0.03641,
+     "culoare": "#fbead3"
+    }
+   ],
+   "info": "Cea mai mare peninsulă de pe Terra, acoperită în mare parte de deșerturi.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "vest"
+  },
+  {
+   "id": "pen-asia-mica",
+   "harta": "pozitie",
+   "nume": "Peninsula Asia Mică (Anatolia)",
+   "categorie": "peninsula",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.06,
+     0.58518
+    ],
+    "r": 0.022
+   },
+   "masti": [
+    {
+     "x": 0.028,
+     "y": 0.55787,
+     "w": 0.066,
+     "h": 0.03641,
+     "culoare": "#f8e9d1"
+    }
+   ],
+   "info": "Între Marea Neagră și Marea Mediterană. Aici se află Capul Baba.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "vest"
+  },
+  {
+   "id": "i-severnaia",
+   "harta": "pozitie",
+   "nume": "Insulele Severnaia Zemlia",
+   "categorie": "insula",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.435,
+     0.09753
+    ],
+    "r": 0.022
+   },
+   "masti": [
+    {
+     "x": 0.338,
+     "y": 0.11704,
+     "w": 0.112,
+     "h": 0.03901,
+     "culoare": "#fafdfc"
+    },
+    {
+     "x": 0.4,
+     "y": 0.0,
+     "w": 0.05,
+     "h": 0.08062,
+     "culoare": "#fbfcfb"
+    }
+   ],
+   "info": "Arhipelag rusesc în Oceanul Arctic.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "nord"
+  },
+  {
+   "id": "i-noua-siberie",
+   "harta": "pozitie",
+   "nume": "Insulele Noua Siberie",
+   "categorie": "insula",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.683,
+     0.17165
+    ],
+    "r": 0.022
+   },
+   "masti": [
+    {
+     "x": 0.648,
+     "y": 0.12744,
+     "w": 0.084,
+     "h": 0.03901,
+     "culoare": "#fafdfd"
+    }
+   ],
+   "info": "Arhipelag rusesc între Marea Laptev și Marea Siberiei de Est.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "nord"
+  },
+  {
+   "id": "i-sahalin",
+   "harta": "pozitie",
+   "nume": "Insula Sahalin",
+   "categorie": "insula",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.692,
+     0.45514
+    ],
+    "r": 0.018
+   },
+   "masti": [
+    {
+     "x": 0.686,
+     "y": 0.46814,
+     "w": 0.036,
+     "h": 0.03641,
+     "culoare": "#f8fcfb"
+    }
+   ],
+   "info": "Insulă rusească lungă și îngustă, la nord de Hokkaido.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "est"
+  },
+  {
+   "id": "i-kurile",
+   "harta": "pozitie",
+   "nume": "Insulele Kurile",
+   "categorie": "insula",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.75,
+     0.50065
+    ],
+    "r": 0.02
+   },
+   "masti": [
+    {
+     "x": 0.735,
+     "y": 0.49675,
+     "w": 0.04,
+     "h": 0.03901,
+     "culoare": "#f8fdfc"
+    }
+   ],
+   "info": "Lanț de insule vulcanice între Kamciatka și Hokkaido.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "est"
+  },
+  {
+   "id": "i-hokkaido",
+   "harta": "pozitie",
+   "nume": "Insula Hokkaido",
+   "categorie": "insula",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.705,
+     0.52666
+    ],
+    "r": 0.014
+   },
+   "masti": [
+    {
+     "x": 0.705,
+     "y": 0.53966,
+     "w": 0.045,
+     "h": 0.02601,
+     "culoare": "#fafdfb"
+    }
+   ],
+   "info": "Cea mai nordică dintre insulele mari ale Japoniei.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "est"
+  },
+  {
+   "id": "i-honshu",
+   "harta": "pozitie",
+   "nume": "Insula Honshu",
+   "categorie": "insula",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.68,
+     0.57867
+    ],
+    "r": 0.018
+   },
+   "masti": [
+    {
+     "x": 0.686,
+     "y": 0.57477,
+     "w": 0.044,
+     "h": 0.02341,
+     "culoare": "#fbfdfd"
+    }
+   ],
+   "info": "Cea mai mare insulă a Japoniei. Aici se află Tokyo și Muntele Fuji.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "est"
+  },
+  {
+   "id": "i-shikoku",
+   "harta": "pozitie",
+   "nume": "Insula Shikoku",
+   "categorie": "insula",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.64,
+     0.62679
+    ],
+    "r": 0.01
+   },
+   "masti": [
+    {
+     "x": 0.642,
+     "y": 0.61899,
+     "w": 0.042,
+     "h": 0.02341,
+     "culoare": "#f8fcfb"
+    }
+   ],
+   "info": "Cea mai mică dintre cele patru insule mari ale Japoniei.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "est"
+  },
+  {
+   "id": "i-kyushu",
+   "harta": "pozitie",
+   "nume": "Insula Kyushu",
+   "categorie": "insula",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.624,
+     0.64369
+    ],
+    "r": 0.01
+   },
+   "masti": [
+    {
+     "x": 0.624,
+     "y": 0.63459,
+     "w": 0.042,
+     "h": 0.02081,
+     "culoare": "#f5fcfc"
+    }
+   ],
+   "info": "Cea mai sudică dintre cele patru insule mari ale Japoniei.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "est"
+  },
+  {
+   "id": "arh-japonez",
+   "harta": "pozitie",
+   "nume": "Arhipelagul Japonez",
+   "categorie": "insula",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.685,
+     0.58518
+    ],
+    "r": 0.04
+   },
+   "masti": [
+    {
+     "x": 0.698,
+     "y": 0.59558,
+     "w": 0.042,
+     "h": 0.03641,
+     "culoare": "#f9fdfc"
+    }
+   ],
+   "info": "Format din patru insule mari (Hokkaido, Honshu, Shikoku, Kyushu) și mii de insule mici.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "est"
+  },
+  {
+   "id": "i-taiwan",
+   "harta": "pozitie",
+   "nume": "Insula Taiwan",
+   "categorie": "insula",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.572,
+     0.71521
+    ],
+    "r": 0.01
+   },
+   "masti": [
+    {
+     "x": 0.576,
+     "y": 0.70221,
+     "w": 0.044,
+     "h": 0.03641,
+     "culoare": "#f8fcfc"
+    }
+   ],
+   "info": "Insulă la est de China, între Marea Chinei de Est și Marea Chinei de Sud.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "est"
+  },
+  {
+   "id": "i-hainan",
+   "harta": "pozitie",
+   "nume": "Insula Hainan",
+   "categorie": "insula",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.512,
+     0.75813
+    ],
+    "r": 0.012
+   },
+   "masti": [
+    {
+     "x": 0.498,
+     "y": 0.74122,
+     "w": 0.046,
+     "h": 0.03901,
+     "culoare": "#f8fcfc"
+    }
+   ],
+   "info": "Insulă chinezească în Marea Chinei de Sud.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "sud-est"
+  },
+  {
+   "id": "i-luzon",
+   "harta": "pozitie",
+   "nume": "Insula Luzon",
+   "categorie": "insula",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.575,
+     0.74382
+    ],
+    "r": 0.016
+   },
+   "masti": [
+    {
+     "x": 0.56,
+     "y": 0.74382,
+     "w": 0.046,
+     "h": 0.02341,
+     "culoare": "#f9fdfb"
+    }
+   ],
+   "info": "Cea mai mare insulă a Filipinelor.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "sud-est"
+  },
+  {
+   "id": "i-mindanao",
+   "harta": "pozitie",
+   "nume": "Insula Mindanao",
+   "categorie": "insula",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.595,
+     0.82185
+    ],
+    "r": 0.016
+   },
+   "masti": [
+    {
+     "x": 0.598,
+     "y": 0.81274,
+     "w": 0.048,
+     "h": 0.02341,
+     "culoare": "#fafdfc"
+    }
+   ],
+   "info": "A doua insulă ca mărime din Filipine, în sudul arhipelagului.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "sud-est"
+  },
+  {
+   "id": "arh-filipine",
+   "harta": "pozitie",
+   "nume": "Arhipelagul Filipine",
+   "categorie": "insula",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.59,
+     0.78023
+    ],
+    "r": 0.03
+   },
+   "masti": [
+    {
+     "x": 0.594,
+     "y": 0.77373,
+     "w": 0.048,
+     "h": 0.03901,
+     "culoare": "#f9fdfc"
+    }
+   ],
+   "info": "Arhipelag format din peste 7 000 de insule.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "sud-est"
+  },
+  {
+   "id": "i-kalimantan",
+   "harta": "pozitie",
+   "nume": "Insula Kalimantan (Borneo)",
+   "categorie": "insula",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.525,
+     0.85826
+    ],
+    "r": 0.028
+   },
+   "masti": [
+    {
+     "x": 0.476,
+     "y": 0.86606,
+     "w": 0.066,
+     "h": 0.03381,
+     "culoare": "#fafbf9"
+    }
+   ],
+   "info": "A treia insulă ca mărime de pe Terra, împărțită între Indonezia, Malaysia și Brunei.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "sud-est"
+  },
+  {
+   "id": "i-sulawesi",
+   "harta": "pozitie",
+   "nume": "Insula Sulawesi",
+   "categorie": "insula",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.59,
+     0.86476
+    ],
+    "r": 0.018
+   },
+   "masti": [
+    {
+     "x": 0.563,
+     "y": 0.85046,
+     "w": 0.058,
+     "h": 0.02601,
+     "culoare": "#f9fcfb"
+    }
+   ],
+   "info": "Insulă indoneziană cu o formă neobișnuită, cu brațe lungi și înguste.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "sud-est"
+  },
+  {
+   "id": "i-sumatra",
+   "harta": "pozitie",
+   "nume": "Insula Sumatra",
+   "categorie": "insula",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.455,
+     0.89727
+    ],
+    "r": 0.02
+   },
+   "masti": [
+    {
+     "x": 0.455,
+     "y": 0.87256,
+     "w": 0.038,
+     "h": 0.03901,
+     "culoare": "#f9fcf9"
+    }
+   ],
+   "info": "Insulă mare a Indoneziei, traversată de Ecuator.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "sud-est"
+  },
+  {
+   "id": "i-java",
+   "harta": "pozitie",
+   "nume": "Insula Java",
+   "categorie": "insula",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.515,
+     0.93888
+    ],
+    "r": 0.018
+   },
+   "masti": [
+    {
+     "x": 0.487,
+     "y": 0.93498,
+     "w": 0.034,
+     "h": 0.02341,
+     "culoare": "#f8fdfb"
+    }
+   ],
+   "info": "Cea mai populată insulă de pe Terra, cu mulți vulcani activi.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "sud-est"
+  },
+  {
+   "id": "i-timor",
+   "harta": "pozitie",
+   "nume": "Insula Timor",
+   "categorie": "insula",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.6,
+     0.95969
+    ],
+    "r": 0.012
+   },
+   "masti": [
+    {
+     "x": 0.58,
+     "y": 0.94798,
+     "w": 0.032,
+     "h": 0.02081,
+     "culoare": "#f7fdfc"
+    }
+   ],
+   "info": "Insulă în sud-estul Arhipelagului Indonezian.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "sud-est"
+  },
+  {
+   "id": "arh-indonezian",
+   "harta": "pozitie",
+   "nume": "Arhipelagul Indonezian",
+   "categorie": "insula",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.53,
+     0.91027
+    ],
+    "r": 0.06
+   },
+   "masti": [
+    {
+     "x": 0.476,
+     "y": 0.95449,
+     "w": 0.094,
+     "h": 0.02341,
+     "culoare": "#f9fdfb"
+    }
+   ],
+   "info": "Cel mai mare arhipelag de pe Terra.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "sud-est"
+  },
+  {
+   "id": "i-noua-guinee",
+   "harta": "pozitie",
+   "nume": "Insula Noua Guinee",
+   "categorie": "insula",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.7,
+     0.91027
+    ],
+    "r": 0.03
+   },
+   "masti": [
+    {
+     "x": 0.65,
+     "y": 0.87256,
+     "w": 0.076,
+     "h": 0.02601,
+     "culoare": "#fafbfb"
+    }
+   ],
+   "info": "A doua insulă ca mărime de pe Terra.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "sud-est"
+  },
+  {
+   "id": "i-sri-lanka",
+   "harta": "pozitie",
+   "nume": "Insula Sri Lanka",
+   "categorie": "insula",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.338,
+     0.83225
+    ],
+    "r": 0.012
+   },
+   "masti": [
+    {
+     "x": 0.338,
+     "y": 0.80364,
+     "w": 0.058,
+     "h": 0.02341,
+     "culoare": "#fafefd"
+    }
+   ],
+   "info": "Insulă la sud-est de Peninsula India.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "sud"
+  },
+  {
+   "id": "i-maldive",
+   "harta": "pozitie",
+   "nume": "Insulele Maldive",
+   "categorie": "insula",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.292,
+     0.85176
+    ],
+    "r": 0.016
+   },
+   "masti": [
+    {
+     "x": 0.242,
+     "y": 0.85956,
+     "w": 0.062,
+     "h": 0.02341,
+     "culoare": "#f8fcfb"
+    }
+   ],
+   "info": "Arhipelag de atoli din corali, foarte puțin înalți deasupra nivelului mării.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "sud"
+  },
+  {
+   "id": "str-bering",
+   "harta": "pozitie",
+   "nume": "Strâmtoarea Bering",
+   "categorie": "stramtoare",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.962,
+     0.30559
+    ],
+    "r": 0.012
+   },
+   "masti": [
+    {
+     "x": 0.962,
+     "y": 0.27568,
+     "w": 0.024,
+     "h": 0.05202,
+     "culoare": "#fafbfa"
+    }
+   ],
+   "info": "Desparte Asia de America de Nord și leagă Oceanul Arctic de Oceanul Pacific.",
+   "valoare": null,
+   "dificultate": 2,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "est"
+  },
+  {
+   "id": "str-ormuz",
+   "harta": "pozitie",
+   "nume": "Strâmtoarea Ormuz",
+   "categorie": "stramtoare",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.198,
+     0.6827
+    ],
+    "r": 0.01
+   },
+   "masti": [
+    {
+     "x": 0.207,
+     "y": 0.6671,
+     "w": 0.052,
+     "h": 0.02341,
+     "culoare": "#fae9d1"
+    }
+   ],
+   "info": "Leagă Golful Persic de Golful Oman. Pe aici trec multe petroliere.",
+   "valoare": null,
+   "dificultate": 2,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "vest"
+  },
+  {
+   "id": "str-bab",
+   "harta": "pozitie",
+   "nume": "Strâmtoarea Bab-el-Mandeb",
+   "categorie": "stramtoare",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.115,
+     0.78674
+    ],
+    "r": 0.01
+   },
+   "masti": [
+    {
+     "x": 0.122,
+     "y": 0.74382,
+     "w": 0.078,
+     "h": 0.04941,
+     "culoare": "#fbe9d2"
+    }
+   ],
+   "info": "Leagă Marea Roșie de Golful Aden și desparte Asia de Africa.",
+   "valoare": null,
+   "dificultate": 2,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "vest"
+  },
+  {
+   "id": "g-persic",
+   "harta": "pozitie",
+   "nume": "Golful Persic",
+   "categorie": "golf",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.168,
+     0.6762
+    ],
+    "r": 0.014
+   },
+   "masti": [
+    {
+     "x": 0.152,
+     "y": 0.6502,
+     "w": 0.026,
+     "h": 0.04681,
+     "culoare": "#f7e7d0"
+    }
+   ],
+   "info": "Golf al Oceanului Indian, cu mari zăcăminte de petrol pe țărmuri.",
+   "valoare": null,
+   "dificultate": 2,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "vest"
+  },
+  {
+   "id": "g-oman",
+   "harta": "pozitie",
+   "nume": "Golful Oman",
+   "categorie": "golf",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.22,
+     0.70221
+    ],
+    "r": 0.014
+   },
+   "masti": [
+    {
+     "x": 0.205,
+     "y": 0.6827,
+     "w": 0.052,
+     "h": 0.02081,
+     "culoare": "#f6fdfc"
+    }
+   ],
+   "info": "Leagă Marea Arabiei de Strâmtoarea Ormuz.",
+   "valoare": null,
+   "dificultate": 2,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "vest"
+  },
+  {
+   "id": "g-aden",
+   "harta": "pozitie",
+   "nume": "Golful Aden",
+   "categorie": "golf",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.14,
+     0.79324
+    ],
+    "r": 0.014
+   },
+   "masti": [
+    {
+     "x": 0.126,
+     "y": 0.76723,
+     "w": 0.056,
+     "h": 0.03121,
+     "culoare": "#f6fcfc"
+    }
+   ],
+   "info": "Între Peninsula Arabia și Africa. Prin Bab-el-Mandeb comunică cu Marea Roșie.",
+   "valoare": null,
+   "dificultate": 2,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "vest"
+  },
+  {
+   "id": "g-bengal",
+   "harta": "pozitie",
+   "nume": "Golful Bengal",
+   "categorie": "golf",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.375,
+     0.79324
+    ],
+    "r": 0.028
+   },
+   "masti": [
+    {
+     "x": 0.355,
+     "y": 0.75683,
+     "w": 0.048,
+     "h": 0.04161,
+     "culoare": "#f9fdfc"
+    }
+   ],
+   "info": "Considerat cel mai mare golf de pe Terra.",
+   "valoare": null,
+   "dificultate": 2,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "sud"
+  },
+  {
+   "id": "g-anadir",
+   "harta": "pozitie",
+   "nume": "Golful Anadîr",
+   "categorie": "golf",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.915,
+     0.3251
+    ],
+    "r": 0.012
+   },
+   "masti": [
+    {
+     "x": 0.903,
+     "y": 0.30689,
+     "w": 0.04,
+     "h": 0.03901,
+     "culoare": "#f8fdfc"
+    }
+   ],
+   "info": "Golf al Mării Bering, la sud de Peninsula Ciukotka.",
+   "valoare": null,
+   "dificultate": 2,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "est"
+  },
+  {
+   "id": "p-kara",
+   "harta": "pozitie",
+   "nume": "Marea Kara",
+   "categorie": "mare",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.28,
+     0.17555
+    ],
+    "r": 0.022
+   },
+   "masti": [
+    {
+     "x": 0.254,
+     "y": 0.14564,
+     "w": 0.086,
+     "h": 0.04161,
+     "culoare": "#fafcfb"
+    }
+   ],
+   "info": "Mare a Oceanului Arctic, la est de Novaia Zemlia.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "nord"
+  },
+  {
+   "id": "p-laptev",
+   "harta": "pozitie",
+   "nume": "Marea Laptev",
+   "categorie": "mare",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.58,
+     0.15605
+    ],
+    "r": 0.028
+   },
+   "masti": [
+    {
+     "x": 0.53,
+     "y": 0.14824,
+     "w": 0.112,
+     "h": 0.03901,
+     "culoare": "#fbfdfc"
+    }
+   ],
+   "info": "Mare a Oceanului Arctic, între Peninsula Taimîr și Insulele Noua Siberie.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "nord"
+  },
+  {
+   "id": "p-siberiei-est",
+   "harta": "pozitie",
+   "nume": "Marea Siberiei de Est",
+   "categorie": "mare",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.76,
+     0.19506
+    ],
+    "r": 0.03
+   },
+   "masti": [
+    {
+     "x": 0.698,
+     "y": 0.17555,
+     "w": 0.162,
+     "h": 0.07152,
+     "culoare": "#fbfdfc"
+    }
+   ],
+   "info": "Mare a Oceanului Arctic, la est de Insulele Noua Siberie.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "nord"
+  },
+  {
+   "id": "p-bering",
+   "harta": "pozitie",
+   "nume": "Marea Bering",
+   "categorie": "mare",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.88,
+     0.37061
+    ],
+    "r": 0.028
+   },
+   "masti": [
+    {
+     "x": 0.88,
+     "y": 0.35111,
+     "w": 0.1,
+     "h": 0.04161,
+     "culoare": "#fbfdfc"
+    }
+   ],
+   "info": "Mare a Oceanului Pacific, la sud de Strâmtoarea Bering.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "est"
+  },
+  {
+   "id": "p-ohotsk",
+   "harta": "pozitie",
+   "nume": "Marea Ohotsk",
+   "categorie": "mare",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.725,
+     0.40962
+    ],
+    "r": 0.028
+   },
+   "masti": [
+    {
+     "x": 0.672,
+     "y": 0.41222,
+     "w": 0.096,
+     "h": 0.03121,
+     "culoare": "#fafdfc"
+    }
+   ],
+   "info": "Între Kamciatka, Insulele Kurile și Sahalin.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "est"
+  },
+  {
+   "id": "p-japoniei",
+   "harta": "pozitie",
+   "nume": "Marea Japoniei",
+   "categorie": "mare",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.66,
+     0.55917
+    ],
+    "r": 0.022
+   },
+   "masti": [
+    {
+     "x": 0.634,
+     "y": 0.47854,
+     "w": 0.06,
+     "h": 0.11443,
+     "culoare": "#f9fdfb"
+    }
+   ],
+   "info": "Între Arhipelagul Japonez și continent.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "est"
+  },
+  {
+   "id": "p-galbena",
+   "harta": "pozitie",
+   "nume": "Marea Galbenă",
+   "categorie": "mare",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.575,
+     0.59168
+    ],
+    "r": 0.012
+   },
+   "masti": [
+    {
+     "x": 0.566,
+     "y": 0.53836,
+     "w": 0.024,
+     "h": 0.08322,
+     "culoare": "#fcebd2"
+    }
+   ],
+   "info": "Între China și Peninsula Coreea.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "est"
+  },
+  {
+   "id": "p-chinei-est",
+   "harta": "pozitie",
+   "nume": "Marea Chinei de Est",
+   "categorie": "mare",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.6,
+     0.63719
+    ],
+    "r": 0.018
+   },
+   "masti": [
+    {
+     "x": 0.58,
+     "y": 0.57217,
+     "w": 0.048,
+     "h": 0.11964,
+     "culoare": "#f8fdfb"
+    }
+   ],
+   "info": "Între China, Japonia și Taiwan.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "est"
+  },
+  {
+   "id": "p-chinei-sud",
+   "harta": "pozitie",
+   "nume": "Marea Chinei de Sud",
+   "categorie": "mare",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.53,
+     0.80624
+    ],
+    "r": 0.028
+   },
+   "masti": [
+    {
+     "x": 0.478,
+     "y": 0.83225,
+     "w": 0.04,
+     "h": 0.09103,
+     "culoare": "#fafcfa"
+    },
+    {
+     "x": 0.505,
+     "y": 0.78023,
+     "w": 0.045,
+     "h": 0.07152,
+     "culoare": "#fbfdfc"
+    },
+    {
+     "x": 0.54,
+     "y": 0.74382,
+     "w": 0.045,
+     "h": 0.05852,
+     "culoare": "#f8fcfb"
+    }
+   ],
+   "info": "Între Indochina, Filipine și Borneo.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "sud-est"
+  },
+  {
+   "id": "p-arabiei",
+   "harta": "pozitie",
+   "nume": "Marea Arabiei",
+   "categorie": "mare",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.24,
+     0.77373
+    ],
+    "r": 0.035
+   },
+   "masti": [
+    {
+     "x": 0.22,
+     "y": 0.72562,
+     "w": 0.06,
+     "h": 0.04161,
+     "culoare": "#fafdfd"
+    }
+   ],
+   "info": "Între Peninsula Arabia și Peninsula India.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "sud"
+  },
+  {
+   "id": "p-rosie",
+   "harta": "pozitie",
+   "nume": "Marea Roșie",
+   "categorie": "mare",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.095,
+     0.72822
+    ],
+    "r": 0.014
+   },
+   "masti": [
+    {
+     "x": 0.068,
+     "y": 0.6567,
+     "w": 0.03,
+     "h": 0.05852,
+     "culoare": "#fae9d0"
+    },
+    {
+     "x": 0.09,
+     "y": 0.70871,
+     "w": 0.038,
+     "h": 0.07152,
+     "culoare": "#f6fafa"
+    }
+   ],
+   "info": "Desparte Peninsula Arabia de Africa.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "vest"
+  },
+  {
+   "id": "p-neagra",
+   "harta": "pozitie",
+   "nume": "Marea Neagră",
+   "categorie": "mare",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.07,
+     0.53966
+    ],
+    "r": 0.018
+   },
+   "masti": [
+    {
+     "x": 0.028,
+     "y": 0.52536,
+     "w": 0.096,
+     "h": 0.03641,
+     "culoare": "#f8fcfb"
+    }
+   ],
+   "info": "La limita dintre Europa și Asia.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "vest"
+  },
+  {
+   "id": "p-mediterana",
+   "harta": "pozitie",
+   "nume": "Marea Mediterană",
+   "categorie": "mare",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.03,
+     0.61118
+    ],
+    "r": 0.018
+   },
+   "masti": [
+    {
+     "x": 0.01,
+     "y": 0.59168,
+     "w": 0.08,
+     "h": 0.04941,
+     "culoare": "#fafdfc"
+    }
+   ],
+   "info": "Udă țărmul vestic al Peninsulei Asia Mică.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "vest"
+  },
+  {
+   "id": "p-caspica",
+   "harta": "pozitie",
+   "nume": "Marea Caspică",
+   "categorie": "mare",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.16,
+     0.55267
+    ],
+    "r": 0.018
+   },
+   "masti": [
+    {
+     "x": 0.144,
+     "y": 0.48635,
+     "w": 0.034,
+     "h": 0.08062,
+     "culoare": "#f5f9f9"
+    }
+   ],
+   "info": "Cel mai întins lac de pe Terra, la limita dintre Europa și Asia.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "vest"
+  },
+  {
+   "id": "p-java",
+   "harta": "pozitie",
+   "nume": "Marea Java",
+   "categorie": "mare",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.52,
+     0.91678
+    ],
+    "r": 0.02
+   },
+   "masti": [
+    {
+     "x": 0.476,
+     "y": 0.89987,
+     "w": 0.082,
+     "h": 0.03641,
+     "culoare": "#f8fcfb"
+    }
+   ],
+   "info": "Între Kalimantan (Borneo), Java și Sumatra.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "sud-est"
+  },
+  {
+   "id": "p-arafura",
+   "harta": "pozitie",
+   "nume": "Marea Arafura",
+   "categorie": "mare",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.68,
+     0.95579
+    ],
+    "r": 0.022
+   },
+   "masti": [
+    {
+     "x": 0.59,
+     "y": 0.94148,
+     "w": 0.144,
+     "h": 0.03121,
+     "culoare": "#f9fcfb"
+    }
+   ],
+   "info": "Între Noua Guinee și Australia.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "sud-est"
+  },
+  {
+   "id": "p-oc-arctic",
+   "harta": "pozitie",
+   "nume": "Oceanul Arctic",
+   "categorie": "ocean",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.33,
+     0.09103
+    ],
+    "r": 0.06
+   },
+   "masti": [
+    {
+     "x": 0.233,
+     "y": 0.07022,
+     "w": 0.145,
+     "h": 0.05462,
+     "culoare": "#fcfdfd"
+    },
+    {
+     "x": 0.518,
+     "y": 0.10143,
+     "w": 0.13,
+     "h": 0.04681,
+     "culoare": "#fcfefd"
+    }
+   ],
+   "info": "Udă țărmul nordic al Asiei.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "nord"
+  },
+  {
+   "id": "p-oc-pacific",
+   "harta": "pozitie",
+   "nume": "Oceanul Pacific",
+   "categorie": "ocean",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.8,
+     0.72822
+    ],
+    "r": 0.08
+   },
+   "masti": [
+    {
+     "x": 0.736,
+     "y": 0.59948,
+     "w": 0.16,
+     "h": 0.03381,
+     "culoare": "#fbfdfc"
+    },
+    {
+     "x": 0.73,
+     "y": 0.78804,
+     "w": 0.15,
+     "h": 0.03121,
+     "culoare": "#fcfdfc"
+    }
+   ],
+   "info": "Udă țărmul estic al Asiei.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "est"
+  },
+  {
+   "id": "p-oc-indian",
+   "harta": "pozitie",
+   "nume": "Oceanul Indian",
+   "categorie": "ocean",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.23,
+     0.88427
+    ],
+    "r": 0.07
+   },
+   "masti": [
+    {
+     "x": 0.14,
+     "y": 0.83225,
+     "w": 0.17,
+     "h": 0.07152,
+     "culoare": "#fcfdfc"
+    },
+    {
+     "x": 0.355,
+     "y": 0.83225,
+     "w": 0.095,
+     "h": 0.10403,
+     "culoare": "#fcfdfc"
+    }
+   ],
+   "info": "Udă țărmul sudic al Asiei.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "sud"
+  },
+  {
+   "id": "ecuator",
+   "harta": "pozitie",
+   "nume": "Ecuatorul",
+   "categorie": "linie",
+   "geometrie": {
+    "tip": "polilinie",
+    "puncte": [
+     [
+      0.025,
+      0.88687
+     ],
+     [
+      0.5,
+      0.88296
+     ],
+     [
+      0.97,
+      0.86996
+     ]
+    ],
+    "toleranta": 0.01
+   },
+   "masti": [
+    {
+     "x": 0.735,
+     "y": 0.85176,
+     "w": 0.066,
+     "h": 0.02861,
+     "culoare": "#fbfafa"
+    }
+   ],
+   "info": "Împarte Pământul în emisfera nordică și emisfera sudică. Trece prin Sumatra și Kalimantan.",
+   "valoare": null,
+   "dificultate": 2,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "sud-est"
+  },
+  {
+   "id": "tropic-rac",
+   "harta": "pozitie",
+   "nume": "Tropicul Racului",
+   "categorie": "linie",
+   "geometrie": {
+    "tip": "polilinie",
+    "puncte": [
+     [
+      0.025,
+      0.69831
+     ],
+     [
+      0.5,
+      0.69961
+     ],
+     [
+      0.97,
+      0.68401
+     ]
+    ],
+    "toleranta": 0.01
+   },
+   "masti": [
+    {
+     "x": 0.74,
+     "y": 0.6736,
+     "w": 0.064,
+     "h": 0.04681,
+     "culoare": "#f8fdfc"
+    }
+   ],
+   "info": "Paralela de aproximativ 23°27′ N. Traversează Peninsula Arabia, India și sudul Chinei.",
+   "valoare": null,
+   "dificultate": 2,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "sud"
+  },
+  {
+   "id": "cerc-polar",
+   "harta": "pozitie",
+   "nume": "Cercul Polar de Nord",
+   "categorie": "linie",
+   "geometrie": {
+    "tip": "polilinie",
+    "puncte": [
+     [
+      0.026,
+      0.26398
+     ],
+     [
+      0.25,
+      0.29389
+     ],
+     [
+      0.516,
+      0.30429
+     ],
+     [
+      0.95,
+      0.30429
+     ]
+    ],
+    "toleranta": 0.01
+   },
+   "masti": [
+    {
+     "x": 0.478,
+     "y": 0.27828,
+     "w": 0.174,
+     "h": 0.03381,
+     "culoare": "#fae9d1"
+    }
+   ],
+   "info": "Paralela de aproximativ 66°33′ N. La nord de ea apar ziua polară și noaptea polară.",
+   "valoare": null,
+   "dificultate": 2,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "nord"
+  },
+  {
+   "id": "meridian-180",
+   "harta": "pozitie",
+   "nume": "Meridianul de 180°",
+   "categorie": "linie",
+   "geometrie": {
+    "tip": "polilinie",
+    "puncte": [
+     [
+      0.902,
+      0.07152
+     ],
+     [
+      0.902,
+      0.91678
+     ]
+    ],
+    "toleranta": 0.01
+   },
+   "masti": [
+    {
+     "x": 0.876,
+     "y": 0.52016,
+     "w": 0.026,
+     "h": 0.3225,
+     "culoare": "#f9fdfc"
+    },
+    {
+     "x": 0.885,
+     "y": 0.04681,
+     "w": 0.04,
+     "h": 0.02341,
+     "culoare": "#fdfdfc"
+    },
+    {
+     "x": 0.877,
+     "y": 0.96749,
+     "w": 0.04,
+     "h": 0.02341,
+     "culoare": "#fafafa"
+    }
+   ],
+   "info": "De-a lungul lui trece, în mare, linia de schimbare a datei. O mică parte din Ciukotka se află în emisfera vestică.",
+   "valoare": null,
+   "dificultate": 2,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "est"
+  },
+  {
+   "id": "vec-europa",
+   "harta": "pozitie",
+   "nume": "Europa",
+   "categorie": "vecin",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.15,
+     0.39012
+    ],
+    "r": 0.06
+   },
+   "masti": [
+    {
+     "x": 0.165,
+     "y": 0.37191,
+     "w": 0.18,
+     "h": 0.04941,
+     "culoare": "#fcead2"
+    }
+   ],
+   "info": "Limita față de Asia: Munții Ural, râul Ural, Marea Caspică, Munții Caucaz și Marea Neagră.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "vest"
+  },
+  {
+   "id": "vec-africa",
+   "harta": "pozitie",
+   "nume": "Africa",
+   "categorie": "vecin",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.06,
+     0.84525
+    ],
+    "r": 0.04
+   },
+   "masti": [
+    {
+     "x": 0.036,
+     "y": 0.82445,
+     "w": 0.092,
+     "h": 0.04161,
+     "culoare": "#edeef0"
+    }
+   ],
+   "info": "Despărțită de Asia prin Canalul Suez și Marea Roșie.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "vest"
+  },
+  {
+   "id": "vec-america",
+   "harta": "pozitie",
+   "nume": "America de Nord",
+   "categorie": "vecin",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.985,
+     0.31209
+    ],
+    "r": 0.02
+   },
+   "masti": [
+    {
+     "x": 0.962,
+     "y": 0.11053,
+     "w": 0.038,
+     "h": 0.28609,
+     "culoare": "#fbfcfb"
+    }
+   ],
+   "info": "Despărțită de Asia prin Strâmtoarea Bering.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "est"
+  },
+  {
+   "id": "vec-australia",
+   "harta": "pozitie",
+   "nume": "Australia",
+   "categorie": "vecin",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.72,
+     0.9883
+    ],
+    "r": 0.025
+   },
+   "masti": [
+    {
+     "x": 0.664,
+     "y": 0.96879,
+     "w": 0.13,
+     "h": 0.03121,
+     "culoare": "#fbfbfb"
+    }
+   ],
+   "info": "Se află la sud-est de Arhipelagul Indonezian.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta poziției geografice și a țărmurilor Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "sud-est"
+  },
+  {
+   "id": "c-siberiei-vest",
+   "harta": "relief",
+   "nume": "Câmpia Siberiei de Vest",
+   "categorie": "campie",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.28434,
+     0.28194
+    ],
+    "r": 0.05249
+   },
+   "masti": [
+    {
+     "x": 0.28215,
+     "y": 0.29274,
+     "w": 0.04812,
+     "h": 0.05999,
+     "culoare": "#91c751"
+    }
+   ],
+   "info": "Una dintre cele mai întinse câmpii de pe Terra, cu multe mlaștini. O străbate râul Obi.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta fizică (relieful) a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "siberia"
+  },
+  {
+   "id": "c-turanului",
+   "harta": "relief",
+   "nume": "Câmpia Turanului",
+   "categorie": "campie",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.2056,
+     0.52789
+    ],
+    "r": 0.02625
+   },
+   "masti": [
+    {
+     "x": 0.19073,
+     "y": 0.5063,
+     "w": 0.05249,
+     "h": 0.05279,
+     "culoare": "#92c652"
+    }
+   ],
+   "info": "Câmpie joasă și uscată, cu deșerturi, la est de Marea Caspică.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta fizică (relieful) a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "centru"
+  },
+  {
+   "id": "c-mesopotamiei",
+   "harta": "relief",
+   "nume": "Câmpia Mesopotamiei",
+   "categorie": "campie",
+   "geometrie": {
+    "tip": "polilinie",
+    "puncte": [
+     [
+      0.09624,
+      0.58788
+     ],
+     [
+      0.11592,
+      0.61788
+     ],
+     [
+      0.1378,
+      0.65087
+     ]
+    ],
+    "toleranta": 0.01312
+   },
+   "masti": [
+    {
+     "x": 0.08968,
+     "y": 0.57588,
+     "w": 0.02187,
+     "h": 0.03299,
+     "culoare": "#f6e499"
+    },
+    {
+     "x": 0.10499,
+     "y": 0.60588,
+     "w": 0.02187,
+     "h": 0.02999,
+     "culoare": "#94c753"
+    },
+    {
+     "x": 0.1203,
+     "y": 0.62987,
+     "w": 0.02187,
+     "h": 0.02999,
+     "culoare": "#94c753"
+    },
+    {
+     "x": 0.12467,
+     "y": 0.65387,
+     "w": 0.02187,
+     "h": 0.021,
+     "culoare": "#f5e499"
+    }
+   ],
+   "info": "Câmpia dintre Tigru și Eufrat, „țara dintre râuri”.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta fizică (relieful) a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "vest"
+  },
+  {
+   "id": "c-indusului",
+   "harta": "relief",
+   "nume": "Câmpia Indusului",
+   "categorie": "campie",
+   "geometrie": {
+    "tip": "polilinie",
+    "puncte": [
+     [
+      0.26903,
+      0.62388
+     ],
+     [
+      0.26247,
+      0.65987
+     ],
+     [
+      0.25591,
+      0.70186
+     ]
+    ],
+    "toleranta": 0.01312
+   },
+   "masti": [
+    {
+     "x": 0.24409,
+     "y": 0.62388,
+     "w": 0.02187,
+     "h": 0.04499,
+     "culoare": "#b87c34"
+    },
+    {
+     "x": 0.25284,
+     "y": 0.66587,
+     "w": 0.0315,
+     "h": 0.04799,
+     "culoare": "#93c752"
+    },
+    {
+     "x": 0.24497,
+     "y": 0.66887,
+     "w": 0.01969,
+     "h": 0.02699,
+     "culoare": "#94c755"
+    },
+    {
+     "x": 0.26903,
+     "y": 0.64187,
+     "w": 0.0175,
+     "h": 0.02699,
+     "culoare": "#93c754"
+    }
+   ],
+   "info": "Câmpie formată din aluviunile aduse de Indus.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta fizică (relieful) a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "sud"
+  },
+  {
+   "id": "c-gangelui",
+   "harta": "relief",
+   "nume": "Câmpia Gangelui",
+   "categorie": "campie",
+   "geometrie": {
+    "tip": "polilinie",
+    "puncte": [
+     [
+      0.31934,
+      0.67187
+     ],
+     [
+      0.35871,
+      0.68386
+     ],
+     [
+      0.3937,
+      0.69586
+     ]
+    ],
+    "toleranta": 0.01531
+   },
+   "masti": [
+    {
+     "x": 0.30621,
+     "y": 0.65687,
+     "w": 0.09405,
+     "h": 0.05099,
+     "culoare": "#f5e498"
+    }
+   ],
+   "info": "Câmpie foarte fertilă și foarte populată.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta fizică (relieful) a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "sud"
+  },
+  {
+   "id": "c-chineza",
+   "harta": "relief",
+   "nume": "Marea Câmpie Chineză",
+   "categorie": "campie",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.55118,
+     0.62388
+    ],
+    "r": 0.02406
+   },
+   "masti": [
+    {
+     "x": 0.53193,
+     "y": 0.60468,
+     "w": 0.04374,
+     "h": 0.05759,
+     "culoare": "#93c653"
+    }
+   ],
+   "info": "Formată din aluviunile fluviilor Huang He și Chang Jiang.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta fizică (relieful) a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "est"
+  },
+  {
+   "id": "c-mekongului",
+   "harta": "relief",
+   "nume": "Câmpia Mekongului",
+   "categorie": "campie",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.47244,
+     0.79784
+    ],
+    "r": 0.0175
+   },
+   "masti": [
+    {
+     "x": 0.43395,
+     "y": 0.75105,
+     "w": 0.02625,
+     "h": 0.02699,
+     "culoare": "#f5e599"
+    },
+    {
+     "x": 0.45057,
+     "y": 0.77085,
+     "w": 0.02625,
+     "h": 0.02699,
+     "culoare": "#94c653"
+    },
+    {
+     "x": 0.46588,
+     "y": 0.79064,
+     "w": 0.02537,
+     "h": 0.02879,
+     "culoare": "#93c753"
+    }
+   ],
+   "info": "Câmpie fertilă, cu orezării, la vărsarea Mekongului.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta fizică (relieful) a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "sud-est"
+  },
+  {
+   "id": "p-siberiei-centrale",
+   "harta": "relief",
+   "nume": "Podișul Siberiei Centrale",
+   "categorie": "podis",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.48119,
+     0.25795
+    ],
+    "r": 0.06562
+   },
+   "masti": [
+    {
+     "x": 0.47244,
+     "y": 0.22975,
+     "w": 0.04812,
+     "h": 0.05699,
+     "culoare": "#f5e599"
+    }
+   ],
+   "info": "Podiș întins între Enisei și Lena.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta fizică (relieful) a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "siberia"
+  },
+  {
+   "id": "p-anatoliei",
+   "harta": "relief",
+   "nume": "Podișul Anatoliei",
+   "categorie": "podis",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.04374,
+     0.57289
+    ],
+    "r": 0.02406
+   },
+   "masti": [
+    {
+     "x": 0.02012,
+     "y": 0.54949,
+     "w": 0.05249,
+     "h": 0.03959,
+     "culoare": "#e9a051"
+    }
+   ],
+   "info": "Podiș înalt în Peninsula Asia Mică, înconjurat de munți.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta fizică (relieful) a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "vest"
+  },
+  {
+   "id": "p-iran",
+   "harta": "relief",
+   "nume": "Podișul Iran",
+   "categorie": "podis",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.1881,
+     0.62388
+    ],
+    "r": 0.02843
+   },
+   "masti": [
+    {
+     "x": 0.15748,
+     "y": 0.60288,
+     "w": 0.04374,
+     "h": 0.04799,
+     "culoare": "#f5e498"
+    }
+   ],
+   "info": "Podiș uscat, mărginit de Munții Elburs și Munții Zagros.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta fizică (relieful) a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "vest"
+  },
+  {
+   "id": "p-pamir",
+   "harta": "relief",
+   "nume": "Podișul Pamir",
+   "categorie": "podis",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.28871,
+     0.57289
+    ],
+    "r": 0.01312
+   },
+   "masti": [
+    {
+     "x": 0.27122,
+     "y": 0.55489,
+     "w": 0.04024,
+     "h": 0.03299,
+     "culoare": "#964f23"
+    }
+   ],
+   "info": "Numit „Acoperișul lumii”. De aici pornesc lanțuri muntoase foarte înalte.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta fizică (relieful) a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "centru"
+  },
+  {
+   "id": "p-tibet",
+   "harta": "relief",
+   "nume": "Podișul Tibet",
+   "categorie": "podis",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.38495,
+     0.61788
+    ],
+    "r": 0.04156
+   },
+   "masti": [
+    {
+     "x": 0.35521,
+     "y": 0.60468,
+     "w": 0.03937,
+     "h": 0.03599,
+     "culoare": "#954d23"
+    }
+   ],
+   "info": "Cel mai înalt și cel mai întins podiș înalt de pe Terra, cu altitudini medii de peste 4 000 m.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta fizică (relieful) a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "centru"
+  },
+  {
+   "id": "p-loess",
+   "harta": "relief",
+   "nume": "Podișul de Loess",
+   "categorie": "podis",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.49869,
+     0.56989
+    ],
+    "r": 0.02187
+   },
+   "masti": [
+    {
+     "x": 0.47944,
+     "y": 0.55189,
+     "w": 0.04899,
+     "h": 0.04079,
+     "culoare": "#eba151"
+    }
+   ],
+   "info": "Acoperit cu loess, un depozit fin adus de vânt, ușor de erodat de ape.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta fizică (relieful) a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "est"
+  },
+  {
+   "id": "p-deccan",
+   "harta": "relief",
+   "nume": "Podișul Deccan",
+   "categorie": "podis",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.31496,
+     0.74985
+    ],
+    "r": 0.02625
+   },
+   "masti": [
+    {
+     "x": 0.29396,
+     "y": 0.70786,
+     "w": 0.04374,
+     "h": 0.03839,
+     "culoare": "#f5e599"
+    }
+   ],
+   "info": "Ocupă cea mai mare parte a Peninsulei India, între Munții Gații de Vest și Gații de Est.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta fizică (relieful) a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "sud"
+  },
+  {
+   "id": "m-ural",
+   "harta": "relief",
+   "nume": "Munții Ural",
+   "categorie": "munti",
+   "geometrie": {
+    "tip": "polilinie",
+    "puncte": [
+     [
+      0.2091,
+      0.26395
+     ],
+     [
+      0.20341,
+      0.32394
+     ],
+     [
+      0.19904,
+      0.38992
+     ],
+     [
+      0.19466,
+      0.45591
+     ]
+    ],
+    "toleranta": 0.01094
+   },
+   "masti": [
+    {
+     "x": 0.19423,
+     "y": 0.30894,
+     "w": 0.01575,
+     "h": 0.08398,
+     "culoare": "#f5e49a"
+    }
+   ],
+   "info": "Munți vechi și joși. Sunt limita convențională dintre Europa și Asia.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta fizică (relieful) a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "vest"
+  },
+  {
+   "id": "m-caucaz",
+   "harta": "relief",
+   "nume": "Munții Caucaz",
+   "categorie": "munti",
+   "geometrie": {
+    "tip": "polilinie",
+    "puncte": [
+     [
+      0.08968,
+      0.5219
+     ],
+     [
+      0.11811,
+      0.53989
+     ],
+     [
+      0.15092,
+      0.55789
+     ]
+    ],
+    "toleranta": 0.01094
+   },
+   "masti": [
+    {
+     "x": 0.08574,
+     "y": 0.5159,
+     "w": 0.03937,
+     "h": 0.024,
+     "culoare": "#d1d2d4"
+    },
+    {
+     "x": 0.11811,
+     "y": 0.53089,
+     "w": 0.03937,
+     "h": 0.02879,
+     "culoare": "#93d0e5"
+    }
+   ],
+   "info": "Munți înalți între Marea Neagră și Marea Caspică.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta fizică (relieful) a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "vest"
+  },
+  {
+   "id": "m-elburs",
+   "harta": "relief",
+   "nume": "Munții Elburs",
+   "categorie": "munti",
+   "geometrie": {
+    "tip": "polilinie",
+    "puncte": [
+     [
+      0.13123,
+      0.59088
+     ],
+     [
+      0.16623,
+      0.58188
+     ],
+     [
+      0.19685,
+      0.57289
+     ]
+    ],
+    "toleranta": 0.01094
+   },
+   "masti": [
+    {
+     "x": 0.12336,
+     "y": 0.59088,
+     "w": 0.03937,
+     "h": 0.02699,
+     "culoare": "#e8a052"
+    },
+    {
+     "x": 0.15748,
+     "y": 0.57888,
+     "w": 0.04374,
+     "h": 0.024,
+     "culoare": "#e9a151"
+    }
+   ],
+   "info": "Munți la sud de Marea Caspică.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta fizică (relieful) a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "vest"
+  },
+  {
+   "id": "m-zagros",
+   "harta": "relief",
+   "nume": "Munții Zagros",
+   "categorie": "munti",
+   "geometrie": {
+    "tip": "polilinie",
+    "puncte": [
+     [
+      0.12686,
+      0.59688
+     ],
+     [
+      0.15311,
+      0.63287
+     ],
+     [
+      0.17935,
+      0.67187
+     ]
+    ],
+    "toleranta": 0.01225
+   },
+   "masti": [
+    {
+     "x": 0.12467,
+     "y": 0.59388,
+     "w": 0.02187,
+     "h": 0.02999,
+     "culoare": "#e89f51"
+    },
+    {
+     "x": 0.13998,
+     "y": 0.61788,
+     "w": 0.02187,
+     "h": 0.02999,
+     "culoare": "#b67d37"
+    },
+    {
+     "x": 0.15748,
+     "y": 0.64187,
+     "w": 0.02625,
+     "h": 0.03599,
+     "culoare": "#e9a050"
+    }
+   ],
+   "info": "Munți în vestul Iranului, de-a lungul Golfului Persic.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta fizică (relieful) a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "vest"
+  },
+  {
+   "id": "m-hindukush",
+   "harta": "relief",
+   "nume": "Munții Hindukush",
+   "categorie": "munti",
+   "geometrie": {
+    "tip": "polilinie",
+    "puncte": [
+     [
+      0.24497,
+      0.61188
+     ],
+     [
+      0.26684,
+      0.59688
+     ],
+     [
+      0.28871,
+      0.58188
+     ]
+    ],
+    "toleranta": 0.01094
+   },
+   "masti": [
+    {
+     "x": 0.23841,
+     "y": 0.59388,
+     "w": 0.02625,
+     "h": 0.02699,
+     "culoare": "#b67d37"
+    },
+    {
+     "x": 0.25809,
+     "y": 0.57289,
+     "w": 0.03281,
+     "h": 0.02999,
+     "culoare": "#b37e3a"
+    },
+    {
+     "x": 0.23403,
+     "y": 0.60888,
+     "w": 0.035,
+     "h": 0.024,
+     "culoare": "#b77c35"
+    }
+   ],
+   "info": "Munți înalți în Afganistan și Pakistan.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta fizică (relieful) a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "centru"
+  },
+  {
+   "id": "m-karakorum",
+   "harta": "relief",
+   "nume": "Munții Karakorum",
+   "categorie": "munti",
+   "geometrie": {
+    "tip": "polilinie",
+    "puncte": [
+     [
+      0.29746,
+      0.59388
+     ],
+     [
+      0.32371,
+      0.59688
+     ],
+     [
+      0.34558,
+      0.60288
+     ]
+    ],
+    "toleranta": 0.00962
+   },
+   "masti": [
+    {
+     "x": 0.28434,
+     "y": 0.58488,
+     "w": 0.06343,
+     "h": 0.02699,
+     "culoare": "#964e23"
+    },
+    {
+     "x": 0.26247,
+     "y": 0.61188,
+     "w": 0.04812,
+     "h": 0.021,
+     "culoare": "#f6e498"
+    }
+   ],
+   "info": "Aici se află vârful K2, al doilea ca înălțime de pe Terra.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta fizică (relieful) a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "centru"
+  },
+  {
+   "id": "m-himalaya",
+   "harta": "relief",
+   "nume": "Munții Himalaya",
+   "categorie": "munti",
+   "geometrie": {
+    "tip": "polilinie",
+    "puncte": [
+     [
+      0.30621,
+      0.63587
+     ],
+     [
+      0.34558,
+      0.65987
+     ],
+     [
+      0.38495,
+      0.67786
+     ],
+     [
+      0.4287,
+      0.68986
+     ]
+    ],
+    "toleranta": 0.01312
+   },
+   "masti": [
+    {
+     "x": 0.30534,
+     "y": 0.62687,
+     "w": 0.04374,
+     "h": 0.03299,
+     "culoare": "#954d23"
+    },
+    {
+     "x": 0.34777,
+     "y": 0.64667,
+     "w": 0.0175,
+     "h": 0.02639,
+     "culoare": "#954d23"
+    },
+    {
+     "x": 0.37445,
+     "y": 0.65987,
+     "w": 0.02275,
+     "h": 0.0216,
+     "culoare": "#964d25"
+    }
+   ],
+   "info": "Cei mai înalți munți de pe Terra. S-au format prin ciocnirea plăcii Indiei cu restul Asiei.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta fizică (relieful) a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "centru"
+  },
+  {
+   "id": "m-kunlun",
+   "harta": "relief",
+   "nume": "Munții Kunlun",
+   "categorie": "munti",
+   "geometrie": {
+    "tip": "polilinie",
+    "puncte": [
+     [
+      0.33246,
+      0.59688
+     ],
+     [
+      0.37183,
+      0.58488
+     ],
+     [
+      0.4112,
+      0.57588
+     ]
+    ],
+    "toleranta": 0.01094
+   },
+   "masti": [
+    {
+     "x": 0.33246,
+     "y": 0.57289,
+     "w": 0.07655,
+     "h": 0.021,
+     "culoare": "#b77c36"
+    },
+    {
+     "x": 0.33246,
+     "y": 0.58488,
+     "w": 0.03937,
+     "h": 0.018,
+     "culoare": "#954d23"
+    }
+   ],
+   "info": "Mărginesc la nord Podișul Tibet.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta fizică (relieful) a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "centru"
+  },
+  {
+   "id": "m-tian-shan",
+   "harta": "relief",
+   "nume": "Munții Tian Shan",
+   "categorie": "munti",
+   "geometrie": {
+    "tip": "polilinie",
+    "puncte": [
+     [
+      0.27997,
+      0.53689
+     ],
+     [
+      0.31934,
+      0.5249
+     ],
+     [
+      0.36308,
+      0.5219
+     ]
+    ],
+    "toleranta": 0.01094
+   },
+   "masti": [
+    {
+     "x": 0.27559,
+     "y": 0.5129,
+     "w": 0.09186,
+     "h": 0.024,
+     "culoare": "#f5e497"
+    },
+    {
+     "x": 0.2734,
+     "y": 0.53089,
+     "w": 0.035,
+     "h": 0.024,
+     "culoare": "#b77c36"
+    }
+   ],
+   "info": "„Munții Cerești”, între Kazahstan, Kârgâzstan și China.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta fizică (relieful) a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "centru"
+  },
+  {
+   "id": "m-altai",
+   "harta": "relief",
+   "nume": "Munții Altai",
+   "categorie": "munti",
+   "geometrie": {
+    "tip": "polilinie",
+    "puncte": [
+     [
+      0.35871,
+      0.46791
+     ],
+     [
+      0.38714,
+      0.44691
+     ],
+     [
+      0.41557,
+      0.42591
+     ]
+    ],
+    "toleranta": 0.01225
+   },
+   "masti": [
+    {
+     "x": 0.35652,
+     "y": 0.44391,
+     "w": 0.03062,
+     "h": 0.02699,
+     "culoare": "#b77d36"
+    },
+    {
+     "x": 0.38058,
+     "y": 0.42292,
+     "w": 0.03718,
+     "h": 0.02699,
+     "culoare": "#e9a050"
+    }
+   ],
+   "info": "La întâlnirea Rusiei, Kazahstanului, Chinei și Mongoliei. Aici izvorăsc Obi și Irtîș.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta fizică (relieful) a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "centru"
+  },
+  {
+   "id": "m-saian",
+   "harta": "relief",
+   "nume": "Munții Saian",
+   "categorie": "munti",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.44182,
+     0.46191
+    ],
+    "r": 0.01662
+   },
+   "masti": [
+    {
+     "x": 0.42432,
+     "y": 0.44391,
+     "w": 0.03587,
+     "h": 0.03599,
+     "culoare": "#e9a052"
+    }
+   ],
+   "info": "În sudul Siberiei, la vest de Lacul Baikal.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta fizică (relieful) a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "siberia"
+  },
+  {
+   "id": "m-iablonovii",
+   "harta": "relief",
+   "nume": "Munții Iablonovîi",
+   "categorie": "munti",
+   "geometrie": {
+    "tip": "polilinie",
+    "puncte": [
+     [
+      0.51181,
+      0.45591
+     ],
+     [
+      0.52931,
+      0.42591
+     ],
+     [
+      0.54681,
+      0.39592
+     ]
+    ],
+    "toleranta": 0.01225
+   },
+   "masti": [
+    {
+     "x": 0.50306,
+     "y": 0.41992,
+     "w": 0.02625,
+     "h": 0.04199,
+     "culoare": "#eaa150"
+    },
+    {
+     "x": 0.51837,
+     "y": 0.38992,
+     "w": 0.035,
+     "h": 0.04199,
+     "culoare": "#e9a051"
+    },
+    {
+     "x": 0.52493,
+     "y": 0.41992,
+     "w": 0.0175,
+     "h": 0.024,
+     "culoare": "#f7e399"
+    }
+   ],
+   "info": "La est de Lacul Baikal.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta fizică (relieful) a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "siberia"
+  },
+  {
+   "id": "m-hinganul",
+   "harta": "relief",
+   "nume": "Munții Hinganul Mare",
+   "categorie": "munti",
+   "geometrie": {
+    "tip": "polilinie",
+    "puncte": [
+     [
+      0.57743,
+      0.5159
+     ],
+     [
+      0.59055,
+      0.47391
+     ],
+     [
+      0.60805,
+      0.43191
+     ]
+    ],
+    "toleranta": 0.01312
+   },
+   "masti": [
+    {
+     "x": 0.56605,
+     "y": 0.42951,
+     "w": 0.04987,
+     "h": 0.05999,
+     "culoare": "#f5e499"
+    }
+   ],
+   "info": "Despart Câmpia Manciuriei de Podișul Mongoliei.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta fizică (relieful) a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "est"
+  },
+  {
+   "id": "m-verhoiansk",
+   "harta": "relief",
+   "nume": "Munții Verhoiansk",
+   "categorie": "munti",
+   "geometrie": {
+    "tip": "polilinie",
+    "puncte": [
+     [
+      0.60805,
+      0.20996
+     ],
+     [
+      0.6343,
+      0.24595
+     ],
+     [
+      0.66929,
+      0.28794
+     ]
+    ],
+    "toleranta": 0.01312
+   },
+   "masti": [
+    {
+     "x": 0.60367,
+     "y": 0.19796,
+     "w": 0.03062,
+     "h": 0.04199,
+     "culoare": "#f5e497"
+    },
+    {
+     "x": 0.62555,
+     "y": 0.23395,
+     "w": 0.03062,
+     "h": 0.03899,
+     "culoare": "#f5e498"
+    },
+    {
+     "x": 0.64742,
+     "y": 0.26395,
+     "w": 0.03062,
+     "h": 0.03899,
+     "culoare": "#f6e398"
+    },
+    {
+     "x": 0.61024,
+     "y": 0.21896,
+     "w": 0.02625,
+     "h": 0.03599,
+     "culoare": "#f5e497"
+    }
+   ],
+   "info": "În apropiere se află unul dintre „polii frigului” din emisfera nordică.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta fizică (relieful) a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "siberia"
+  },
+  {
+   "id": "m-cerski",
+   "harta": "relief",
+   "nume": "Munții Cerski",
+   "categorie": "munti",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.70429,
+     0.28194
+    ],
+    "r": 0.02406
+   },
+   "masti": [
+    {
+     "x": 0.68066,
+     "y": 0.26395,
+     "w": 0.04549,
+     "h": 0.04079,
+     "culoare": "#eaa151"
+    },
+    {
+     "x": 0.67717,
+     "y": 0.28194,
+     "w": 0.01312,
+     "h": 0.024,
+     "culoare": "#eaa150"
+    }
+   ],
+   "info": "Munți în nord-estul Siberiei.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta fizică (relieful) a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "siberia"
+  },
+  {
+   "id": "m-kolima",
+   "harta": "relief",
+   "nume": "Munții Kolîma",
+   "categorie": "munti",
+   "geometrie": {
+    "tip": "polilinie",
+    "puncte": [
+     [
+      0.7699,
+      0.31194
+     ],
+     [
+      0.80052,
+      0.29394
+     ],
+     [
+      0.83552,
+      0.27295
+     ]
+    ],
+    "toleranta": 0.01225
+   },
+   "masti": [
+    {
+     "x": 0.76334,
+     "y": 0.29394,
+     "w": 0.03937,
+     "h": 0.02699,
+     "culoare": "#f6e498"
+    },
+    {
+     "x": 0.79615,
+     "y": 0.26995,
+     "w": 0.04374,
+     "h": 0.02699,
+     "culoare": "#f6e498"
+    }
+   ],
+   "info": "Munți în nord-estul Siberiei, la nord de Marea Ohotsk.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta fizică (relieful) a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "siberia"
+  },
+  {
+   "id": "m-gatii-vest",
+   "harta": "relief",
+   "nume": "Munții Gații de Vest",
+   "categorie": "munti",
+   "geometrie": {
+    "tip": "polilinie",
+    "puncte": [
+     [
+      0.27997,
+      0.69586
+     ],
+     [
+      0.29746,
+      0.75585
+     ],
+     [
+      0.31059,
+      0.82184
+     ]
+    ],
+    "toleranta": 0.01094
+   },
+   "masti": [
+    {
+     "x": 0.27559,
+     "y": 0.69886,
+     "w": 0.02187,
+     "h": 0.04799,
+     "culoare": "#f5e498"
+    },
+    {
+     "x": 0.28653,
+     "y": 0.74385,
+     "w": 0.02406,
+     "h": 0.04799,
+     "culoare": "#f5e599"
+    },
+    {
+     "x": 0.29746,
+     "y": 0.78584,
+     "w": 0.02275,
+     "h": 0.04799,
+     "culoare": "#f5e599"
+    }
+   ],
+   "info": "Mărginesc la vest Podișul Deccan și primesc ploi musonice foarte bogate.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta fizică (relieful) a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "sud"
+  },
+  {
+   "id": "m-gatii-est",
+   "harta": "relief",
+   "nume": "Munții Gații de Est",
+   "categorie": "munti",
+   "geometrie": {
+    "tip": "polilinie",
+    "puncte": [
+     [
+      0.31496,
+      0.80384
+     ],
+     [
+      0.34558,
+      0.75585
+     ],
+     [
+      0.38058,
+      0.70786
+     ]
+    ],
+    "toleranta": 0.01094
+   },
+   "masti": [
+    {
+     "x": 0.30621,
+     "y": 0.77385,
+     "w": 0.02625,
+     "h": 0.04319,
+     "culoare": "#f5e598"
+    },
+    {
+     "x": 0.3259,
+     "y": 0.73485,
+     "w": 0.02712,
+     "h": 0.04199,
+     "culoare": "#f4e499"
+    },
+    {
+     "x": 0.34777,
+     "y": 0.70066,
+     "w": 0.03937,
+     "h": 0.03719,
+     "culoare": "#f5e498"
+    }
+   ],
+   "info": "Mărginesc la est Podișul Deccan. Sunt mai joși și mai fragmentați decât Gații de Vest.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta fizică (relieful) a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "sud"
+  },
+  {
+   "id": "d-karakum",
+   "harta": "relief",
+   "nume": "Deșertul Karakum",
+   "categorie": "desert",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.22747,
+     0.57588
+    ],
+    "r": 0.01969
+   },
+   "masti": [
+    {
+     "x": 0.20385,
+     "y": 0.55489,
+     "w": 0.05249,
+     "h": 0.04319,
+     "culoare": "#f6e499"
+    }
+   ],
+   "info": "Deșert de nisip în Turkmenistan.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta fizică (relieful) a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "centru"
+  },
+  {
+   "id": "d-taklamakan",
+   "harta": "relief",
+   "nume": "Deșertul Taklamakan",
+   "categorie": "desert",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.34996,
+     0.56089
+    ],
+    "r": 0.02843
+   },
+   "masti": [
+    {
+     "x": 0.30621,
+     "y": 0.53989,
+     "w": 0.07218,
+     "h": 0.03899,
+     "culoare": "#f5e499"
+    }
+   ],
+   "info": "Deșert de nisip în vestul Chinei, înconjurat de munți înalți.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta fizică (relieful) a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "centru"
+  },
+  {
+   "id": "d-gobi",
+   "harta": "relief",
+   "nume": "Deșertul Gobi",
+   "categorie": "desert",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.50744,
+     0.5159
+    ],
+    "r": 0.03718
+   },
+   "masti": [
+    {
+     "x": 0.48469,
+     "y": 0.5039,
+     "w": 0.04812,
+     "h": 0.03839,
+     "culoare": "#f5e499"
+    }
+   ],
+   "info": "Deșert rece în Mongolia și China, cu ierni geroase.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta fizică (relieful) a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "centru"
+  },
+  {
+   "id": "d-an-nafud",
+   "harta": "relief",
+   "nume": "Deșertul An-Nafūd",
+   "categorie": "desert",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.09405,
+     0.66587
+    ],
+    "r": 0.01969
+   },
+   "masti": [
+    {
+     "x": 0.06999,
+     "y": 0.63947,
+     "w": 0.05337,
+     "h": 0.03959,
+     "culoare": "#f5e499"
+    }
+   ],
+   "info": "Deșert de nisip în nordul Peninsulei Arabia, cu dune roșiatice.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta fizică (relieful) a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "vest"
+  },
+  {
+   "id": "d-rub-al-khali",
+   "harta": "relief",
+   "nume": "Deșertul Rub al-Khāli",
+   "categorie": "desert",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.14436,
+     0.74985
+    ],
+    "r": 0.02625
+   },
+   "masti": [
+    {
+     "x": 0.11111,
+     "y": 0.73665,
+     "w": 0.06649,
+     "h": 0.03839,
+     "culoare": "#f5e599"
+    }
+   ],
+   "info": "„Sfertul gol”: cel mai mare deșert continuu de nisip de pe Terra.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta fizică (relieful) a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "vest"
+  },
+  {
+   "id": "dep-turfan",
+   "harta": "relief",
+   "nume": "Depresiunea Turfan (−154 m)",
+   "categorie": "depresiune",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.37533,
+     0.53629
+    ],
+    "r": 0.00612
+   },
+   "masti": [
+    {
+     "x": 0.3797,
+     "y": 0.5039,
+     "w": 0.06824,
+     "h": 0.03839,
+     "culoare": "#eba050"
+    },
+    {
+     "x": 0.3692,
+     "y": 0.54109,
+     "w": 0.04199,
+     "h": 0.018,
+     "culoare": "#f5e498"
+    }
+   ],
+   "info": "Pe hartă: −154 m. Una dintre cele mai joase depresiuni de pe uscat.",
+   "valoare": -154,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta fizică (relieful) a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "centru"
+  },
+  {
+   "id": "dep-marea-moarta",
+   "harta": "relief",
+   "nume": "Țărmul Mării Moarte (−427 m)",
+   "categorie": "depresiune",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.06124,
+     0.63347
+    ],
+    "r": 0.00612
+   },
+   "masti": [
+    {
+     "x": 0.04812,
+     "y": 0.60948,
+     "w": 0.04287,
+     "h": 0.018,
+     "culoare": "#f4e499"
+    }
+   ],
+   "info": "Pe hartă: −427 m. Țărmul Mării Moarte este cel mai jos loc de pe uscatul Terrei.",
+   "valoare": -427,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta fizică (relieful) a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "vest"
+  },
+  {
+   "id": "v-everest",
+   "harta": "relief",
+   "nume": "Vârful Chomolungma / Everest (8 850 m)",
+   "categorie": "varf",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.3692,
+     0.66587
+    ],
+    "r": 0.00612
+   },
+   "masti": [
+    {
+     "x": 0.37183,
+     "y": 0.64067,
+     "w": 0.07655,
+     "h": 0.0156,
+     "culoare": "#954e23"
+    },
+    {
+     "x": 0.37183,
+     "y": 0.65387,
+     "w": 0.07874,
+     "h": 0.0156,
+     "culoare": "#964e23"
+    }
+   ],
+   "info": "Cel mai înalt vârf de pe Terra. Pe hartă: 8 850 m; măsurătoarea comună China–Nepal din 2020 a dat 8 848,86 m.",
+   "valoare": 8850,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta fizică (relieful) a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "centru"
+  },
+  {
+   "id": "v-ararat",
+   "harta": "relief",
+   "nume": "Ararat (5 165 m) – vulcan stins",
+   "categorie": "varf",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.10674,
+     0.55909
+    ],
+    "r": 0.00612
+   },
+   "masti": [
+    {
+     "x": 0.07349,
+     "y": 0.54949,
+     "w": 0.03062,
+     "h": 0.0168,
+     "culoare": "#e89f50"
+    },
+    {
+     "x": 0.06562,
+     "y": 0.56509,
+     "w": 0.04549,
+     "h": 0.0168,
+     "culoare": "#e8a052"
+    }
+   ],
+   "info": "Vulcan stins, cel mai înalt vârf al Turciei (5 165 m pe hartă).",
+   "valoare": 5165,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta fizică (relieful) a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "vest"
+  },
+  {
+   "id": "vu-kliucev",
+   "harta": "relief",
+   "nume": "Kliucev (4 750 m)",
+   "categorie": "vulcan",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.8154,
+     0.38872
+    ],
+    "r": 0.00612
+   },
+   "masti": [
+    {
+     "x": 0.7664,
+     "y": 0.36233,
+     "w": 0.04199,
+     "h": 0.018,
+     "culoare": "#d1ecf8"
+    },
+    {
+     "x": 0.76115,
+     "y": 0.37792,
+     "w": 0.05249,
+     "h": 0.018,
+     "culoare": "#d2edf9"
+    }
+   ],
+   "info": "Cel mai înalt vulcan activ din Asia (4 750 m pe hartă), în Peninsula Kamciatka.",
+   "valoare": 4750,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta fizică (relieful) a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "est"
+  },
+  {
+   "id": "vu-fuji",
+   "harta": "relief",
+   "nume": "Fuji (3 776 m)",
+   "categorie": "vulcan",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.68329,
+     0.59628
+    ],
+    "r": 0.00612
+   },
+   "masti": [
+    {
+     "x": 0.68766,
+     "y": 0.58788,
+     "w": 0.02275,
+     "h": 0.018,
+     "culoare": "#d2ecf9"
+    },
+    {
+     "x": 0.67367,
+     "y": 0.60348,
+     "w": 0.05074,
+     "h": 0.018,
+     "culoare": "#d2ecf9"
+    }
+   ],
+   "info": "Simbolul Japoniei: un vulcan cu formă de con aproape perfect, pe insula Honshu.",
+   "valoare": 3776,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta fizică (relieful) a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "est"
+  },
+  {
+   "id": "vu-sakura",
+   "harta": "relief",
+   "nume": "Sakura (1 117 m)",
+   "categorie": "vulcan",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.63342,
+     0.63827
+    ],
+    "r": 0.00612
+   },
+   "masti": [
+    {
+     "x": 0.63648,
+     "y": 0.62867,
+     "w": 0.03937,
+     "h": 0.018,
+     "culoare": "#d1ecf8"
+    },
+    {
+     "x": 0.62555,
+     "y": 0.64547,
+     "w": 0.05687,
+     "h": 0.0168,
+     "culoare": "#d1ecf8"
+    }
+   ],
+   "info": "Vulcan foarte activ (Sakurajima) în sudul insulei Kyushu.",
+   "valoare": 1117,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta fizică (relieful) a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "est"
+  },
+  {
+   "id": "vu-mayon",
+   "harta": "relief",
+   "nume": "Mayon (2 463 m)",
+   "categorie": "vulcan",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.5748,
+     0.76185
+    ],
+    "r": 0.00525
+   },
+   "masti": [
+    {
+     "x": 0.53018,
+     "y": 0.73305,
+     "w": 0.03675,
+     "h": 0.0168,
+     "culoare": "#d2ecf8"
+    },
+    {
+     "x": 0.52318,
+     "y": 0.74745,
+     "w": 0.04812,
+     "h": 0.0168,
+     "culoare": "#d2ecf8"
+    }
+   ],
+   "info": "Vulcan din Filipine, cu formă de con aproape perfect.",
+   "valoare": 2463,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta fizică (relieful) a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "sud-est"
+  },
+  {
+   "id": "vu-pinatubo",
+   "harta": "relief",
+   "nume": "Pinatubo (1 486 m)",
+   "categorie": "vulcan",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.57043,
+     0.77445
+    ],
+    "r": 0.00481
+   },
+   "masti": [
+    {
+     "x": 0.51794,
+     "y": 0.76665,
+     "w": 0.04899,
+     "h": 0.0168,
+     "culoare": "#d2ecf8"
+    },
+    {
+     "x": 0.51619,
+     "y": 0.78104,
+     "w": 0.05249,
+     "h": 0.0168,
+     "culoare": "#d2ecf8"
+    }
+   ],
+   "info": "Erupția din 1991 a fost una dintre cele mai mari din secolul XX și a răcit temporar clima Terrei.",
+   "valoare": 1486,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta fizică (relieful) a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "sud-est"
+  },
+  {
+   "id": "vu-taal",
+   "harta": "relief",
+   "nume": "Taal (311 m)",
+   "categorie": "vulcan",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.57568,
+     0.79064
+    ],
+    "r": 0.00525
+   },
+   "masti": [
+    {
+     "x": 0.58005,
+     "y": 0.78584,
+     "w": 0.02362,
+     "h": 0.0168,
+     "culoare": "#d2edfa"
+    },
+    {
+     "x": 0.56955,
+     "y": 0.80024,
+     "w": 0.04287,
+     "h": 0.0168,
+     "culoare": "#d0eaf9"
+    }
+   ],
+   "info": "Vulcan mic din Filipine, aflat pe o insulă dintr-un lac.",
+   "valoare": 311,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta fizică (relieful) a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "sud-est"
+  },
+  {
+   "id": "vu-krakatoa",
+   "harta": "relief",
+   "nume": "Krakatoa (813 m)",
+   "categorie": "vulcan",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.48206,
+     0.95621
+    ],
+    "r": 0.00525
+   },
+   "masti": [
+    {
+     "x": 0.44269,
+     "y": 0.95981,
+     "w": 0.04899,
+     "h": 0.0168,
+     "culoare": "#d3ecf9"
+    },
+    {
+     "x": 0.44619,
+     "y": 0.9754,
+     "w": 0.04199,
+     "h": 0.0168,
+     "culoare": "#d2ebf8"
+    }
+   ],
+   "info": "Erupția din 1883 s-a auzit la mii de kilometri distanță.",
+   "valoare": 813,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta fizică (relieful) a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "sud-est"
+  },
+  {
+   "id": "vu-merapi",
+   "harta": "relief",
+   "nume": "Merapi (2 930 m)",
+   "categorie": "vulcan",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.51094,
+     0.96941
+    ],
+    "r": 0.00525
+   },
+   "masti": [
+    {
+     "x": 0.50394,
+     "y": 0.93281,
+     "w": 0.0385,
+     "h": 0.0168,
+     "culoare": "#cfebf8"
+    },
+    {
+     "x": 0.49694,
+     "y": 0.94661,
+     "w": 0.05249,
+     "h": 0.0168,
+     "culoare": "#d0ebf7"
+    }
+   ],
+   "info": "Unul dintre cei mai activi vulcani din Indonezia, pe insula Java.",
+   "valoare": 2930,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta fizică (relieful) a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "sud-est"
+  },
+  {
+   "id": "vu-semeru",
+   "harta": "relief",
+   "nume": "Semeru (3 676 m)",
+   "categorie": "vulcan",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.52756,
+     0.97421
+    ],
+    "r": 0.00525
+   },
+   "masti": [
+    {
+     "x": 0.53106,
+     "y": 0.96461,
+     "w": 0.04112,
+     "h": 0.018,
+     "culoare": "#d1ecf9"
+    },
+    {
+     "x": 0.52493,
+     "y": 0.9814,
+     "w": 0.05249,
+     "h": 0.018,
+     "culoare": "#d1ecf9"
+    }
+   ],
+   "info": "Cel mai înalt vulcan de pe insula Java.",
+   "valoare": 3676,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta fizică (relieful) a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "sud-est"
+  },
+  {
+   "id": "vu-tambora",
+   "harta": "relief",
+   "nume": "Tambora (2 850 m)",
+   "categorie": "vulcan",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.57568,
+     0.97301
+    ],
+    "r": 0.00525
+   },
+   "masti": [
+    {
+     "x": 0.5783,
+     "y": 0.96221,
+     "w": 0.04812,
+     "h": 0.018,
+     "culoare": "#d2edfa"
+    },
+    {
+     "x": 0.57393,
+     "y": 0.9778,
+     "w": 0.05249,
+     "h": 0.018,
+     "culoare": "#d0ebf8"
+    }
+   ],
+   "info": "Erupția din 1815 a dus la „anul fără vară” (1816) în Europa și America de Nord.",
+   "valoare": 2850,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta fizică (relieful) a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "sud-est"
+  },
+  {
+   "id": "r-oc-arctic",
+   "harta": "relief",
+   "nume": "Oceanul Arctic",
+   "categorie": "ocean",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.56868,
+     0.10198
+    ],
+    "r": 0.05687
+   },
+   "masti": [
+    {
+     "x": 0.22091,
+     "y": 0.03299,
+     "w": 0.14436,
+     "h": 0.05399,
+     "culoare": "#d2eefb"
+    },
+    {
+     "x": 0.52275,
+     "y": 0.021,
+     "w": 0.11811,
+     "h": 0.05999,
+     "culoare": "#d2eefa"
+    }
+   ],
+   "info": "Udă țărmul nordic al Asiei.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta fizică (relieful) a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "nord"
+  },
+  {
+   "id": "r-oc-pacific",
+   "harta": "relief",
+   "nume": "Oceanul Pacific",
+   "categorie": "ocean",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.85302,
+     0.59988
+    ],
+    "r": 0.06562
+   },
+   "masti": [
+    {
+     "x": 0.78521,
+     "y": 0.54589,
+     "w": 0.14217,
+     "h": 0.03299,
+     "culoare": "#d2eefa"
+    },
+    {
+     "x": 0.78521,
+     "y": 0.63587,
+     "w": 0.1378,
+     "h": 0.04199,
+     "culoare": "#d2eefa"
+    }
+   ],
+   "info": "Udă țărmul estic al Asiei.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta fizică (relieful) a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "est"
+  },
+  {
+   "id": "r-oc-indian",
+   "harta": "relief",
+   "nume": "Oceanul Indian",
+   "categorie": "ocean",
+   "geometrie": {
+    "tip": "punct",
+    "c": [
+     0.30621,
+     0.89982
+    ],
+    "r": 0.06562
+   },
+   "masti": [
+    {
+     "x": 0.10936,
+     "y": 0.85783,
+     "w": 0.11374,
+     "h": 0.09598,
+     "culoare": "#d2eefa"
+    },
+    {
+     "x": 0.21872,
+     "y": 0.83983,
+     "w": 0.11374,
+     "h": 0.07199,
+     "culoare": "#d2eefb"
+    },
+    {
+     "x": 0.33246,
+     "y": 0.85183,
+     "w": 0.06124,
+     "h": 0.07199,
+     "culoare": "#d2eefa"
+    },
+    {
+     "x": 0.38495,
+     "y": 0.92382,
+     "w": 0.06124,
+     "h": 0.06599,
+     "culoare": "#d2eefa"
+    }
+   ],
+   "info": "Udă țărmul sudic al Asiei.",
+   "valoare": null,
+   "dificultate": 1,
+   "verificat": false,
+   "sursa": "Harta fizică (relieful) a Asiei, manualul de Geografie pentru clasa a VII-a (Art Klett)",
+   "regiune": "sud"
+  }
+ ]
+}

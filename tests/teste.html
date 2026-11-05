@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ro"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Teste automate – Hărțile Asiei</title>
+<style>body{font:15px/1.5 system-ui;margin:16px;background:#fff;color:#111}.ok{color:#1d6b2c}.nu{color:#b3261e;font-weight:700}pre{white-space:pre-wrap}</style></head>
+<body><h1>Teste automate</h1><p>Integritatea datelor și geometria hărților.</p><pre id="out">Se rulează…</pre>
+<script type="module">
+import * as E from '../js/engine.js';
+import { valideaza, centru, inZona } from '../js/atlas-geo.js';
+import { construiesteNivel } from '../js/atlas.js';
+const rez = []; const t = (nume, ok, info = '') => rez.push({ nume, ok: !!ok, info });
+try {
+  await E.incarcaDate();
+  const AT = E.D.atlas;
+  const prob = valideaza(AT);
+  t('date valide (geometrie în hartă, centrul fiecărui element în propria zonă, măști în hartă)', prob.length === 0, prob.join('; ') || `${AT.elemente.length} elemente`);
+  t('3 hărți și toate elementele din inventar (≥ 170)', Object.keys(AT.harti).length === 3 && AT.elemente.length >= 170, String(AT.elemente.length));
+  t('atingerea centrului e acceptată, atingerea departe e respinsă', AT.elemente.every(e => { const h = AT.harti[e.harta]; const [x, y] = centru(e.geometrie); return inZona(e.geometrie, x, y, h.latime, h.inaltime) && !inZona(e.geometrie, x > .5 ? .02 : .98, y > .5 ? .02 : .98, h.latime, h.inaltime); }));
+  t('fiecare râu are bazinul hidrografic', AT.elemente.filter(e => e.categorie === 'rau').every(e => AT.bazine[e.bazin]));
+  const niv = AT.regiuni.flatMap(r => r.niveluri.map(n => n.id));
+  const goale = niv.filter(n => construiesteNivel(n).length < 8);
+  t('fiecare nivel are 8–12 itemi', goale.length === 0, goale.join(', ') || `${niv.length} niveluri`);
+  t('niciun element marcat „verificat” fără calibrarea profesorului', AT.elemente.every(e => e.verificat === false));
+  t('valorile de pe hartă: Everest 8 850 m, Turfan −154 m', AT.elemente.find(e => e.id === 'v-everest').valoare === 8850 && AT.elemente.find(e => e.id === 'dep-turfan').valoare === -154);
+  t('extremitatea sudică insulară: Insula Roti', AT.elemente.find(e => e.id === 'extrem-s-insular').nume.startsWith('Insula Roti'));
+  t('insigne: toate elementele cerute există', AT.insigne.every(i => i.ids.every(id => AT.elemente.some(e => e.id === id))) && E.D.insigne.length === 10, String(E.D.insigne.length));
+} catch (e) { t('excepție', false, e.stack || e.message); }
+window.__rezultat = rez;
+document.getElementById('out').innerHTML = rez.map(r => `<span class="${r.ok ? 'ok' : 'nu'}">${r.ok ? '✓' : '✗'} ${r.nume}</span>${r.info ? ' — ' + r.info : ''}`).join('\n') + `\n\n${rez.filter(r => r.ok).length} / ${rez.length} teste trecute`;
+</script></body></html>

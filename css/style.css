@@ -1,0 +1,332 @@
+/* GeoQuest – Expediția Asia. Paleta GeoQuest: munte, podiș, câmpie, apă. */
+:root {
+  --mare: #12355b; --mare-2: #1e4f80; --apa: #d7e9f2; --campie: #4f8f4a; --campie-pal: #dcebd2;
+  --podis: #d9a930; --podis-pal: #f6e7b8; --munte: #94532a; --munte-pal: #f3e3d6; --pion: #d21f3c;
+  --hartie: #f3f7f6; --hartie-geo: #f3f7f6; --suprafata: #ffffff; --text: #13263b; --text-2: #4a5d70; --linie: #c3d1d9;
+  --ok: #2d7a3e; --ok-pal: #e3f2e5; --gresit: #b3261e; --gresit-pal: #fbe7e5;
+  --umbra: 0 1px 0 rgba(18, 53, 91, .08), 0 6px 18px rgba(18, 53, 91, .08);
+  --raza: 14px; --font: 'Atkinson Hyperlegible', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --tinta: 48px; --fs: 18px; color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --mare: #9cc7ea; --mare-2: #6fa8d6; --apa: #16324d; --campie: #7fbf72; --campie-pal: #1f3a24; --podis: #e7c25a; --podis-pal: #3d3417;
+    --munte: #d9946a; --munte-pal: #3a2a20; --pion: #ff6b7f; --hartie: #0d1e30; --hartie-geo: #f3f7f6; --suprafata: #142a40; --text: #e8f0f6; --text-2: #a9bccb;
+    --linie: #2b4560; --ok: #6fcf86; --ok-pal: #173a22; --gresit: #ff8a80; --gresit-pal: #43201e; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --mare: #9cc7ea; --mare-2: #6fa8d6; --apa: #16324d; --campie: #7fbf72; --campie-pal: #1f3a24; --podis: #e7c25a; --podis-pal: #3d3417;
+  --munte: #d9946a; --munte-pal: #3a2a20; --pion: #ff6b7f; --hartie: #0d1e30; --hartie-geo: #f3f7f6; --suprafata: #142a40; --text: #e8f0f6; --text-2: #a9bccb;
+  --linie: #2b4560; --ok: #6fcf86; --ok-pal: #173a22; --gresit: #ff8a80; --gresit-pal: #43201e; color-scheme: dark;
+}
+:root[data-text-mare] { --fs: 22px; --tinta: 56px; }
+:root[data-proiectie] { --fs: 26px; --tinta: 64px; --text: #000; --text-2: #222; --hartie: #fff; --suprafata: #fff; --linie: #333; --mare: #0b2540; color-scheme: light; }
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--hartie); color: var(--text); font: var(--fs)/1.5 var(--font); min-height: 100vh; display: flex; flex-direction: column; overflow-x: hidden; }
+main:focus, main:focus-visible { outline: none !important; }
+main { flex: 1; width: 100%; max-width: 980px; margin: 0 auto; padding: 16px; outline: none; }
+:root[data-proiectie] main { max-width: 1500px; }
+a { color: var(--mare-2); }
+h1, h2, h3 { line-height: 1.2; margin: .3em 0 .5em; }
+.sari { position: absolute; left: -999px; } .sari:focus { left: 8px; top: 8px; background: var(--suprafata); padding: 8px; z-index: 9; }
+.incarcare { text-align: center; padding: 3rem 0; }
+.mic, small { font-size: .82em; color: var(--text-2); }
+
+/* antet */
+.antet { position: sticky; top: 0; z-index: 5; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 16px; background: var(--mare); color: #fff; box-shadow: var(--umbra); }
+.antet .logo { display: flex; align-items: center; gap: 8px; color: #fff; text-decoration: none; }
+.antet .logo b { display: block; font-size: 1.05em; } .antet .logo small { color: #cfe3f5; display: block; font-size: .72em; margin-top: -4px; }
+.stat-antet { display: flex; gap: 6px; align-items: center; }
+.pastila { background: rgba(255,255,255,.14); color: #fff; padding: 4px 10px; border-radius: 999px; text-decoration: none; font-size: .82em; white-space: nowrap; min-height: 36px; display: inline-flex; align-items: center; }
+.pastila.avatar { font-size: 1.2em; padding: 2px 8px; }
+@media (max-width: 520px) { .ascuns-mic { display: none; } .antet .logo small { display: none; } }
+.subsol { text-align: center; font-size: .75em; color: var(--text-2); padding: 16px; }
+
+/* elemente comune */
+.card { background: var(--suprafata); border: 1px solid var(--linie); border-radius: var(--raza); box-shadow: var(--umbra); padding: 18px; margin: 12px 0; }
+.btn { appearance: none; border: 0; background: var(--mare); color: #fff; font: inherit; font-weight: 700; padding: 10px 18px; min-height: var(--tinta); border-radius: 12px; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 6px; text-align: center; }
+:root[data-theme="dark"] .btn, .btn { }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]):not([data-proiectie]) .btn { background: #2e6aa3; } }
+.btn:hover { filter: brightness(1.1); } .btn:disabled { opacity: .45; cursor: not-allowed; }
+.btn.sec { background: transparent; color: var(--mare-2); border: 2px solid currentColor; }
+.btn.mic { min-height: 40px; padding: 6px 12px; font-size: .85em; }
+.btn.mare { font-size: 1.1em; padding: 14px 26px; }
+.btn.pericol { background: var(--gresit); }
+.btn input[type=file] { display: none; }
+.rand-butoane { display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-end; margin-top: 14px; }
+.rand-butoane.stanga { justify-content: flex-start; }
+.camp { font: inherit; width: 100%; padding: 10px 12px; min-height: var(--tinta); border: 2px solid var(--linie); border-radius: 10px; background: var(--suprafata); color: var(--text); }
+.camp:focus, .btn:focus-visible, button:focus-visible, a:focus-visible, [tabindex]:focus-visible { outline: 3px solid var(--podis); outline-offset: 2px; }
+.camp.corect { border-color: var(--ok); background: var(--ok-pal); } .camp.gresit { border-color: var(--gresit); background: var(--gresit-pal); }
+.eticheta { display: block; font-weight: 700; margin: 12px 0 6px; } .eticheta .camp { margin-top: 6px; font-weight: 400; }
+.pesmet { margin: 4px 0 8px; } .pesmet a { text-decoration: none; font-weight: 700; display: inline-flex; min-height: 40px; align-items: center; }
+.titlu-sectiune { font-size: 1.35em; }
+
+/* Geo */
+.geo-spune { display: flex; gap: 10px; align-items: flex-start; margin: 10px 0; }
+.geo-avatar { flex: none; }
+.geo-bula { background: var(--podis-pal); border-radius: 14px; padding: 10px 14px; position: relative; flex: 1; }
+.geo-bula::before { content: ''; position: absolute; left: -8px; top: 18px; border: 8px solid transparent; border-right-color: var(--podis-pal); border-left: 0; }
+.geo-mare { display: flex; justify-content: center; }
+
+/* start */
+.start { text-align: center; max-width: 620px; margin: 20px auto; }
+.start .eticheta { text-align: left; }
+.avatare { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin: 6px 0 14px; }
+.avatar-btn { font-size: 1.6em; width: 56px; height: 56px; border-radius: 50%; border: 2px solid var(--linie); background: var(--suprafata); cursor: pointer; }
+.avatar-btn[aria-pressed="true"] { border-color: var(--pion); box-shadow: 0 0 0 3px var(--podis); }
+
+/* tărâmuri */
+.taramuri { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+.taram { position: relative; display: flex; flex-direction: column; gap: 4px; padding: 16px; border-radius: var(--raza); background: var(--suprafata); border: 2px solid var(--linie); border-top: 8px solid var(--c); text-decoration: none; color: var(--text); box-shadow: var(--umbra); transition: transform .15s; }
+.taram:hover { transform: translateY(-3px); }
+.taram .icon { font-size: 2em; } .taram .nr { font-size: .75em; text-transform: uppercase; letter-spacing: .06em; color: var(--text-2); }
+.taram.boss { background: linear-gradient(135deg, var(--suprafata), var(--apa)); }
+.taram.blocat { opacity: .7; filter: grayscale(.6); }
+.progres { display: block; height: 10px; border-radius: 6px; background: var(--linie); overflow: hidden; }
+.progres > span { display: block; height: 100%; background: linear-gradient(90deg, var(--podis), var(--campie)); }
+.progres.lat { height: 14px; margin: 8px 0; }
+.actiuni { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; }
+.actiuni.doua { grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); margin-bottom: 8px; }
+.actiune { display: flex; flex-direction: column; gap: 2px; padding: 14px; border-radius: var(--raza); background: var(--suprafata); border: 1px solid var(--linie); text-decoration: none; color: var(--text); box-shadow: var(--umbra); min-height: var(--tinta); }
+.actiune > span { font-size: 1.6em; }
+
+.cap-taram { display: flex; align-items: center; gap: 12px; border-left: 8px solid var(--c); padding-left: 12px; }
+.cap-taram .icon { font-size: 2.2em; }
+.niveluri { list-style: none; padding: 0; display: grid; gap: 10px; }
+.nivel { display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-radius: var(--raza); background: var(--suprafata); border: 1px solid var(--linie); text-decoration: none; color: var(--text); min-height: 64px; box-shadow: var(--umbra); }
+.nr-nivel { width: 40px; height: 40px; border-radius: 50%; background: var(--mare); color: #fff; display: grid; place-items: center; font-weight: 700; flex: none; }
+.tn { flex: 1; display: flex; flex-direction: column; }
+.stele { color: #e0a800; font-size: 1.25em; letter-spacing: 2px; white-space: nowrap; } .stele .gol { color: var(--linie); }
+.stele.mari { font-size: 2.6em; margin: 0; }
+
+/* fișe */
+.fisa { border-top: 8px solid var(--c); } .fisa ul { padding-left: 1.2em; } .fisa li { margin: 8px 0; }
+
+/* întrebare */
+.titlu-nivel { font-size: 1.2em; }
+.bara-progres { height: 12px; background: var(--linie); border-radius: 8px; overflow: hidden; margin: 6px 0; }
+.bara-progres span { display: block; height: 100%; background: var(--campie); transition: width .3s; }
+.meta-q { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 6px; }
+.eticheta-tip, .eticheta-test, .eticheta-rep { font-size: .75em; padding: 2px 10px; border-radius: 999px; background: var(--apa); color: var(--text); font-weight: 700; }
+.eticheta-test { background: var(--podis-pal); } .eticheta-rep { background: var(--gresit-pal); }
+.enunt { font-size: 1.15em; }
+.instr { color: var(--text-2); font-size: .9em; margin: 4px 0 10px; }
+.variante { display: grid; gap: 8px; } .variante.doua { grid-template-columns: 1fr 1fr; }
+.varianta { text-align: left; font: inherit; color: var(--text); background: var(--suprafata); border: 2px solid var(--linie); border-radius: 12px; padding: 10px 14px; min-height: var(--tinta); cursor: pointer; }
+.varianta.af { text-align: center; font-weight: 700; }
+.varianta .litera { font-weight: 700; color: var(--mare-2); }
+.varianta[aria-pressed="true"] { border-color: var(--mare-2); background: var(--apa); box-shadow: inset 0 0 0 1px var(--mare-2); }
+.corect, .varianta.corect { border-color: var(--ok) !important; background: var(--ok-pal) !important; }
+.corect::after { content: ' ✓'; color: var(--ok); font-weight: 700; }
+.gresit, .varianta.gresit { border-color: var(--gresit) !important; background: var(--gresit-pal) !important; }
+.gresit::after { content: ' ✗'; color: var(--gresit); font-weight: 700; }
+.ratat { border-style: dashed !important; border-color: var(--ok) !important; }
+.eliminat { opacity: .35; text-decoration: line-through; }
+.lacunar { font-size: 1.15em; font-weight: 700; } .lacunar .gol { color: var(--pion); }
+
+/* potrivire */
+.potrivire { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media (max-width: 560px) { .potrivire { grid-template-columns: 1fr; } }
+.potrivire .col { display: grid; gap: 8px; align-content: start; }
+.potrivire h4 { margin: 0; text-align: center; }
+.pot-a, .pot-b { font: inherit; text-align: left; color: var(--text); background: var(--suprafata); border: 2px solid var(--linie); border-left: 10px solid var(--c, transparent); border-radius: 10px; padding: 8px 10px; min-height: var(--tinta); cursor: pointer; }
+.pot-a.activ { box-shadow: 0 0 0 3px var(--podis); }
+.pot-a .nr, .pot-b .nr { font-weight: 700; color: var(--mare-2); } .leg { font-weight: 700; color: var(--pion); }
+
+/* hartă */
+.harta { position: relative; width: 100%; max-width: 900px; margin: 8px auto; border-radius: 12px; overflow: hidden; border: 1px solid var(--linie); background: #fff; touch-action: manipulation; }
+.harta.mica { max-width: 640px; }
+.harta img { display: block; width: 100%; height: auto; user-select: none; -webkit-user-select: none; }
+.harta-strat { position: absolute; inset: 0; width: 100%; height: 100%; }
+.regiune polygon { fill: transparent; stroke: transparent; stroke-width: 4; }
+.regiune[role="button"] { cursor: pointer; }
+.regiune[role="button"]:hover polygon, .regiune:focus polygon { fill: rgba(255, 220, 80, .35); stroke: #12355b; }
+.regiune:focus { outline: none; }
+.regiune.evidentiata polygon { fill: rgba(210, 31, 60, .32); stroke: #d21f3c; stroke-width: 6; }
+.regiune.aleasa polygon { fill: rgba(30, 79, 128, .45); stroke: #12355b; stroke-width: 7; }
+.regiune.corect polygon { fill: rgba(45, 122, 62, .5); stroke: #1d5a2b; stroke-width: 7; }
+.regiune.gresit polygon { fill: rgba(179, 38, 30, .45); stroke: #b3261e; stroke-width: 7; }
+.regiune.corect::after, .regiune.gresit::after { content: none; }
+.eticheta-litera circle { fill: #fff; stroke: #d21f3c; stroke-width: 6; }
+.eticheta-litera text { font: 700 48px var(--font); text-anchor: middle; fill: #d21f3c; }
+.calibrare { fill: rgba(255, 200, 0, .25); stroke: #d21f3c; stroke-width: 4; }
+.grila-select { display: grid; gap: 8px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.rand-select { display: flex; align-items: center; gap: 8px; } .rand-select .camp { flex: 1; }
+
+/* selecții, comparare, ordonare */
+.varianta.bifa[aria-pressed="true"]::before { content: '☑ '; }
+.venn .rand-comp { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 10px; border: 2px solid var(--linie); border-radius: 10px; margin: 6px 0; background: var(--suprafata); }
+.rand-comp .af-text { flex: 1 1 260px; } .rand-comp .bt { display: flex; gap: 6px; }
+.mini { font: inherit; font-size: .82em; min-height: 40px; min-width: 40px; padding: 4px 10px; border-radius: 8px; border: 2px solid var(--linie); background: var(--suprafata); color: var(--text); cursor: pointer; }
+.mini.as[aria-pressed="true"] { background: var(--ok-pal); border-color: var(--ok); font-weight: 700; }
+.mini.de[aria-pressed="true"] { background: var(--podis-pal); border-color: var(--podis); font-weight: 700; }
+.bloc h4 { margin: 10px 0 6px; }
+.rand-ce { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; padding: 6px 0; border-bottom: 1px solid var(--linie); }
+.rand-ce label { flex: 1 1 200px; display: flex; align-items: center; gap: 8px; min-height: var(--tinta); }
+.rand-ce input[type=checkbox] { width: 24px; height: 24px; }
+.rand-ce .camp { flex: 1 1 220px; width: auto; }
+.ordonare { list-style: none; padding: 0; margin: 0 0 10px; display: grid; gap: 6px; counter-reset: ord; }
+.el-ord { display: flex; align-items: center; gap: 8px; background: var(--suprafata); border: 2px solid var(--linie); border-radius: 10px; padding: 6px 8px; }
+.el-ord::before { counter-increment: ord; content: counter(ord) "."; font-weight: 700; color: var(--mare-2); min-width: 1.4em; }
+.el-ord .txt { flex: 1; } .el-ord .sageti { display: inline-flex; gap: 6px; flex: none; }
+.indicii { padding-left: 1.4em; font-weight: 700; } .indicii li { margin: 4px 0; }
+
+/* feedback */
+.feedback { margin-top: 12px; border-radius: 12px; padding: 4px 10px 10px; }
+.feedback.ok { background: var(--ok-pal); } .feedback.nu { background: var(--gresit-pal); }
+.feedback .geo-bula { background: var(--suprafata); } .feedback .geo-bula::before { border-right-color: var(--suprafata); }
+.solutie { margin: 6px 0; } .sol { margin: 4px 0; padding-left: 1.2em; }
+.sursa summary { cursor: pointer; font-size: .85em; color: var(--text-2); min-height: 32px; } .sursa p { font-style: italic; font-size: .9em; }
+.xp-castigat { font-weight: 700; color: var(--ok); margin: 4px 0 0; }
+
+/* final, insigne, profil */
+.final { text-align: center; } .final .rand-butoane { justify-content: center; }
+.insigne { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+.insigna { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 2px; padding: 12px; border-radius: var(--raza); background: var(--suprafata); border: 1px dashed var(--linie); opacity: .65; }
+.insigna.castigata { opacity: 1; border: 2px solid var(--podis); background: var(--podis-pal); }
+.insigna .ic { font-size: 2em; }
+.insigne-noi { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; } .insigne-noi h3 { width: 100%; }
+.profil { text-align: center; } .avatar-mare { font-size: 4em; } .rang { font-size: 1.15em; }
+.ranguri { text-align: left; } .ranguri li { opacity: .55; margin: 4px 0; } .ranguri li.atins { opacity: 1; font-weight: 700; }
+
+/* flashcard */
+.leitner { display: flex; flex-wrap: wrap; gap: 6px; } .cutie { padding: 2px 10px; border-radius: 999px; background: var(--apa); font-size: .8em; }
+.flashcard { display: grid; width: 100%; min-height: 240px; border: 0; padding: 0; background: none; cursor: pointer; perspective: 1000px; font: inherit; color: var(--text); }
+.flashcard > div { grid-area: 1/1; display: flex; flex-direction: column; justify-content: center; gap: 10px; padding: 24px; border-radius: 18px; background: var(--suprafata); border: 2px solid var(--linie); box-shadow: var(--umbra); backface-visibility: hidden; transition: transform .5s; }
+.flashcard .fata p { font-size: 1.2em; font-weight: 700; }
+.flashcard .verso { transform: rotateY(180deg); background: var(--podis-pal); }
+.flashcard .verso .raspuns { font-size: 1.3em; font-weight: 700; }
+.flashcard.intors .fata { transform: rotateY(180deg); } .flashcard.intors .verso { transform: rotateY(360deg); }
+
+/* setări / profesor */
+.comutator { display: flex; gap: 12px; align-items: flex-start; padding: 10px 0; border-bottom: 1px solid var(--linie); cursor: pointer; }
+.comutator input { width: 26px; height: 26px; flex: none; margin-top: 2px; } .comutator span { display: flex; flex-direction: column; }
+.taburi { display: flex; flex-wrap: wrap; gap: 6px; } .taburi button { font: inherit; font-size: .85em; padding: 8px 12px; min-height: 44px; border-radius: 10px 10px 0 0; border: 1px solid var(--linie); background: var(--suprafata); color: var(--text); cursor: pointer; }
+.taburi button[aria-selected="true"] { background: var(--mare); color: #fff; }
+.filtre { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; } .filtre .camp { flex: 1 1 200px; width: auto; }
+.lista-prof { display: grid; gap: 4px; max-height: 70vh; overflow: auto; }
+.rand-prof { display: grid; grid-template-columns: 36px 110px 120px 1fr auto; gap: 8px; align-items: center; font-size: .8em; padding: 4px; border-bottom: 1px solid var(--linie); }
+.rand-prof.inactiv { opacity: .45; } .rand-prof .id { font-family: monospace; } .rand-prof input { width: 22px; height: 22px; }
+@media (max-width: 640px) { .rand-prof { grid-template-columns: 30px 1fr auto; } .rand-prof .id, .rand-prof .tip { display: none; } }
+.cod { font-family: monospace; font-size: .75em; margin: 8px 0; }
+
+/* expediție */
+.cap-exp { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.ceas { font-weight: 700; background: var(--apa); padding: 4px 12px; border-radius: 999px; } .ceas.putin { background: var(--gresit-pal); color: var(--gresit); }
+.nav-exp { display: flex; flex-wrap: wrap; gap: 4px; }
+.pas { font: inherit; font-size: .75em; min-width: 44px; min-height: 40px; border-radius: 8px; border: 2px solid var(--linie); background: var(--suprafata); color: var(--text); cursor: pointer; }
+.pas.facut { background: var(--campie-pal); border-color: var(--campie); } .pas.curent { border-color: var(--pion); box-shadow: 0 0 0 2px var(--podis); }
+.nota { font-size: 1.6em; } .nota strong { font-size: 1.6em; color: var(--mare-2); }
+.tabel-barem { margin: 10px auto; border-collapse: collapse; min-width: 260px; }
+.tabel-barem th, .tabel-barem td { border: 1px solid var(--linie); padding: 6px 12px; } .tabel-barem .total { font-weight: 700; background: var(--apa); }
+.gresite { text-align: left; } .item-gresit { border: 1px solid var(--linie); border-radius: 10px; padding: 8px 10px; margin: 6px 0; background: var(--suprafata); }
+.item-gresit summary { cursor: pointer; font-size: .9em; }
+
+/* mod clasă */
+.echipe-config { display: grid; gap: 8px; margin: 8px 0; } .echipa-cfg { display: flex; align-items: center; gap: 8px; }
+.echipa-cfg .punct { width: 22px; height: 22px; border-radius: 50%; background: var(--c); flex: none; }
+.segment { display: inline-flex; border: 2px solid var(--mare-2); border-radius: 10px; overflow: hidden; }
+.segment button { font: inherit; min-width: 56px; min-height: 44px; border: 0; background: var(--suprafata); color: var(--text); cursor: pointer; }
+.segment button[aria-pressed="true"] { background: var(--mare-2); color: #fff; }
+.scor-echipe { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 8px; }
+.echipa { border-radius: 12px; padding: 8px 12px; background: var(--suprafata); border: 3px solid var(--c); display: flex; justify-content: space-between; align-items: center; }
+.echipa.activa { background: var(--c); color: #fff; transform: scale(1.04); }
+.echipa .pct { font-size: 1.5em; font-weight: 700; }
+.centru { text-align: center; }
+.roata { width: 220px; height: 220px; margin: 20px auto; border-radius: 50%; position: relative; background: conic-gradient(#94532a 0 72deg, #d9a930 72deg 144deg, #2d7a3e 144deg 216deg, #1e4f80 216deg 288deg, #0f766e 288deg 360deg); transition: transform 2.2s cubic-bezier(.2,.8,.2,1); border: 6px solid var(--mare); }
+.roata span { position: absolute; left: 50%; top: 50%; width: 1.6em; height: 1.2em; margin: -.6em 0 0 -.8em; text-align: center; font-size: 1.6em; font-weight: 700; color: #fff; transform: rotate(calc(var(--i) * 72deg + 36deg)) translate(0, -72px); }
+.rez-roata { font-size: 1.3em; font-weight: 700; }
+.podium { list-style: none; padding: 0; font-size: 1.3em; } .podium li { margin: 8px 0; border-left: 10px solid var(--c); padding-left: 10px; text-align: left; }
+
+/* modal, toast, confetti */
+.modal-fundal { position: fixed; inset: 0; background: rgba(0,0,0,.45); display: grid; place-items: center; z-index: 20; padding: 16px; }
+.modal { background: var(--suprafata); border-radius: var(--raza); padding: 18px; width: min(760px, 100%); max-height: 90vh; overflow: auto; }
+.toast { position: fixed; left: 50%; bottom: 24px; transform: translate(-50%, 140%); background: var(--mare); color: #fff; padding: 10px 18px; border-radius: 12px; z-index: 30; transition: transform .25s; max-width: calc(100vw - 32px); text-align: center; }
+.toast.vizibil { transform: translate(-50%, 0); } .toast-ok { background: var(--ok); }
+.confetti { position: fixed; inset: 0; pointer-events: none; z-index: 25; overflow: hidden; }
+.confetti span { position: absolute; top: -40px; animation: cade 2.2s ease-in forwards; }
+@keyframes cade { to { transform: translateY(110vh) rotate(540deg); opacity: .6; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; animation: none !important; } }
+
+/* ---------- Expediția Asia: hărțile din teste */
+.harta-test { display: grid; gap: 12px; align-items: start; }
+@media (min-width: 900px) { .harta-test { grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); } .harta-test .grila-select { grid-template-columns: 1fr; } }
+.harta-test .harta { max-width: 560px; margin: 0 auto; }
+:root[data-proiectie] .harta-test .harta { max-width: 720px; }
+.inel { fill: rgba(255, 214, 10, .18); stroke: var(--pion); stroke-width: 7; }
+.inel.activ { stroke-width: 9; animation: puls 1.6s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+.inel.corect { stroke: #1d6b2c; fill: rgba(45, 122, 62, .25); } .inel.gresit { stroke: #b3261e; fill: rgba(179, 38, 30, .25); }
+@keyframes puls { 50% { transform: scale(1.18); } }
+.marcaj { display: inline-grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; border: 3px solid var(--pion); background: var(--suprafata); flex: none; }
+.harta.decupat { max-width: 520px; background: #fff; }
+.harta.decupat svg { display: block; width: 100%; height: auto; }
+.flashcard .card-harta { margin: 0 auto; pointer-events: none; }
+.harti-prof { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.harti-prof .harta { max-width: 520px; }
+/* ---------- comparare climatică */
+.tabel-comp .criteriu { border: 2px solid var(--linie); border-radius: 12px; padding: 4px 10px 8px; margin: 10px 0; }
+.tabel-comp legend { font-weight: 700; padding: 0 6px; color: var(--mare-2); }
+.mini.z0[aria-pressed="true"] { background: var(--apa); border-color: var(--mare-2); font-weight: 700; }
+.mini.z1[aria-pressed="true"] { background: var(--podis-pal); border-color: var(--podis); font-weight: 700; }
+.sol-comp td, .sol-comp th { text-align: left; vertical-align: top; }
+.tabel-barem.sol-comp { width: 100%; font-size: .92em; }
+
+/* ===================== Atlasul Asiei ===================== */
+.card-atlas { display: flex; align-items: center; gap: 14px; margin: 18px 0 6px; padding: 16px 18px; border-radius: var(--raza); text-decoration: none; color: #fff;
+  background: linear-gradient(120deg, #12355b 0%, #1e6fa8 55%, #4f8f4a 100%); box-shadow: var(--umbra); min-height: var(--tinta); }
+.card-atlas .icon { font-size: 2.2em; } .card-atlas strong { display: block; font-size: 1.15em; } .card-atlas small { color: #e3f0fa; display: block; }
+.card-atlas .sageata { margin-left: auto; font-size: 1.6em; font-weight: 700; }
+.card-atlas:hover { filter: brightness(1.08); }
+.cap-atlas { display: flex; align-items: center; gap: 12px; } .cap-atlas .icon { font-size: 2.4em; } .cap-atlas h1 { margin: 0; }
+
+.hi-cadru { position: relative; margin: 10px auto; }
+.hi { position: relative; width: 100%; overflow: hidden; border-radius: 12px; border: 1px solid var(--linie); background: #d7ecf5; touch-action: none; cursor: crosshair; user-select: none; -webkit-user-select: none; }
+.hi.marita { cursor: grab; }
+.hi-scena { position: absolute; inset: 0; transform-origin: 0 0; will-change: transform; }
+.hi-scena img { display: block; width: 100%; height: 100%; pointer-events: none; }
+.hi-strat { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.hi-controale { position: absolute; right: 8px; top: 8px; display: flex; flex-direction: column; gap: 6px; }
+.hi-btn { width: 44px; height: 44px; border-radius: 10px; border: 1px solid var(--linie); background: rgba(255,255,255,.92); color: #12355b; font: inherit; font-size: 1.3em; font-weight: 700; cursor: pointer; box-shadow: var(--umbra); }
+:root[data-proiectie] .hi-btn { width: 60px; height: 60px; }
+.masca { transition: opacity .3s; }
+.zona { fill: rgba(255, 209, 64, .28); stroke: #d48a00; stroke-width: 3; vector-effect: non-scaling-stroke; }
+.zona.linie { fill: none; stroke: rgba(255, 196, 0, .55); stroke-linecap: round; stroke-linejoin: round; vector-effect: none; }
+.zona.intreaba { fill: rgba(255, 196, 0, .25); stroke: #e0a800; stroke-width: 4; animation: puls 1.4s ease-in-out infinite; }
+.zona.intreaba.linie { stroke: rgba(255, 170, 0, .7); fill: none; }
+.zona.corect { fill: rgba(45, 160, 70, .28); stroke: #1d7a33; }
+.zona.corect.linie { fill: none; stroke: rgba(45, 160, 70, .6); }
+.zona.solutie { fill: rgba(30, 111, 168, .25); stroke: #12355b; stroke-dasharray: 6 4; }
+.zona.solutie.linie { fill: none; stroke: rgba(30, 111, 168, .6); stroke-dasharray: none; }
+.zona.editare { fill: rgba(210, 31, 60, .18); stroke: #d21f3c; stroke-width: 2; }
+.zona.editare.linie { fill: none; stroke: rgba(210, 31, 60, .45); }
+.masca-edit { stroke: #d21f3c; stroke-width: 2; stroke-dasharray: 5 3; vector-effect: non-scaling-stroke; opacity: .92; }
+@keyframes puls { 50% { opacity: .45; } }
+@media (prefers-reduced-motion: reduce) { .zona.intreaba { animation: none; } }
+.pin-halou { fill: rgba(210, 31, 60, .25); stroke: #d21f3c; stroke-width: 2; vector-effect: non-scaling-stroke; }
+.pin-miez { fill: #d21f3c; stroke: #fff; stroke-width: 2; vector-effect: non-scaling-stroke; }
+.pin-gresit .pin-halou { fill: rgba(179, 38, 30, .3); stroke: #b3261e; } .pin-gresit .pin-miez { fill: #b3261e; }
+.pin-nod .pin-halou { fill: rgba(210, 31, 60, .1); } .pin-nod .pin-miez { fill: #fff; stroke: #d21f3c; }
+.pin-nr { cursor: pointer; }
+.pin-nr circle { fill: #12355b; stroke: #fff; stroke-width: 2.5; vector-effect: non-scaling-stroke; }
+.pin-nr text { fill: #fff; font-weight: 700; font-family: var(--font); pointer-events: none; }
+.pin-nr.completat circle { fill: #1e6fa8; } .pin-nr:focus { outline: none; } .pin-nr:focus circle { stroke: var(--podis); stroke-width: 5; }
+.pin-nr.corect circle { fill: var(--ok); } .pin-nr.gresit circle { fill: var(--gresit); }
+.link-mic { font: inherit; font-size: .85em; background: none; border: 0; color: var(--mare-2); text-decoration: underline; cursor: pointer; padding: 8px 0; min-height: 40px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0; }
+.eticheta-chip { font: inherit; font-size: .9em; padding: 8px 14px; min-height: 44px; border-radius: 999px; border: 2px solid var(--linie); background: var(--suprafata); color: var(--text); cursor: pointer; }
+.eticheta-chip[aria-pressed="true"] { border-color: var(--pion); background: var(--podis-pal); font-weight: 700; }
+.eticheta-chip.folosit { opacity: .55; }
+.asocieri { padding-left: 1.6em; margin: 6px 0; display: grid; gap: 6px; }
+.asocieri li { padding: 0; border-radius: 10px; }
+.loc-asociere { font: inherit; width: 100%; text-align: left; padding: 8px 12px; min-height: 44px; border-radius: 10px; border: 2px dashed var(--linie); background: var(--suprafata); color: var(--text); cursor: pointer; }
+.asocieri li.corect .loc-asociere { border: 2px solid var(--ok); } .asocieri li.gresit .loc-asociere { border: 2px solid var(--gresit); }
+.asocieri li.corect::after, .asocieri li.gresit::after { content: none; }
+.fisa-element h2 { margin-top: 0; }
+.lista-atlas .rand-prof.ales { background: var(--podis-pal); }
+.editor-atlas input[type=range] { width: 100%; }
+.btn.mic[aria-pressed="true"] { background: var(--mare); color: #fff; }
+.decupaj { display: block; width: 100%; height: auto; border-radius: 10px; }

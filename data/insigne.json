@@ -1,0 +1,32 @@
+[
+ {
+  "id": "primul-pas",
+  "nume": "Primul pas",
+  "icon": "👣",
+  "descriere": "Primul nivel terminat."
+ },
+ {
+  "id": "trei-stele",
+  "nume": "Trei stele",
+  "icon": "⭐",
+  "descriere": "Un nivel terminat cu 3 stele."
+ },
+ {
+  "id": "toate-nivelurile",
+  "nume": "Toate nivelurile",
+  "icon": "🧭",
+  "descriere": "Cel puțin o stea la fiecare nivel al celor trei hărți."
+ },
+ {
+  "id": "seria-de-foc",
+  "nume": "Seria de foc",
+  "icon": "🔥",
+  "descriere": "Ai învățat 5 zile la rând."
+ },
+ {
+  "id": "memorie-de-bufnita",
+  "nume": "Memorie de bufniță",
+  "icon": "🦉",
+  "descriere": "10 flashcard-uri ajunse în cutia 5."
+ }
+]
